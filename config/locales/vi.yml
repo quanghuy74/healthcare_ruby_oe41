@@ -11,6 +11,13 @@ vi:
     services: "Dịch vụ"
     contact: "Liên hệ"
     signup: "Đăng kí"
+    login: "Đăng nhập"
+    profile: "Trang cá nhân"
+    update_profile: "Sửa thông tin"
+    logout: "Đăng xuất"
+    change_pass: "Đổi mật khẩu"
+    admin_page: "Trang quản trị"
+    staff_page: "Trang nhân viên"
 
   footer:
     email: "healthcare@healthcare.com"
@@ -79,6 +86,13 @@ vi:
         title: "Đăng kí"
         btn_signup: "Tạo tài khoản"
         btn_cancle: "Hủy"
+    sessions:
+      new:
+        title: "Đăng nhập"
+        remember: "Ghi nhớ tài khoản"
+        ask_account: "Bạn không có tài khoản?"
+        signup: "Đăng kí ngay!"
+        forgot_pass: "Quên mật khẩu?"
 
   controller:
     accounts:
@@ -87,3 +101,7 @@ vi:
         danger: "Đăng kí không thành công"
       load_account:
         error: "Không tìm thấy tài khoản"
+    sessions:
+      create:
+        success: "Đăng nhập thành công"
+        danger: "Tài khoản hoặc mật khẩu không đúng"

@@ -27,6 +27,15 @@ class Account < ApplicationRecord
   enum gender: {male: 0, female: 1}
   enum status: {block: 0, unactive: 1, active: 2}
 
+  def Account.digest string
+    if cost = ActiveModel::SecurePassword.min_cost
+      BCrypt::Engine::MIN_COST
+    else
+      BCrypt::Engine.cost
+    end
+      BCrypt::Password.create string, cost: cost
+  end
+
   private
 
   def downcase_email
