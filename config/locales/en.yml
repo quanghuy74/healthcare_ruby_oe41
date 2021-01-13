@@ -50,3 +50,30 @@ en:
   staff:
     our_staff: "Our Staffs"
     our_specialist: "Our specialist"
+
+  activerecord:
+    models:
+      account : Accounts
+    attributes:
+      account:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password_confirmation"
+        full_name: "Full name"
+        address: "Address"
+        card_id: "Card id"
+        phone_number: "Phone number"
+
+
+  views:
+    accounts:
+      new:
+        title: "Sign up"
+        btn_signup: "Create my account"
+  controller:
+    accounts:
+      create:
+        succsess: "Welcome to the Health care service website!"
+        danger: "Signup was not successul"
+      load_account:
+        error: "Not found account"

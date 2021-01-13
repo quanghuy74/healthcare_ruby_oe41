@@ -1,0 +1,40 @@
+$state-danger-text: red;
+
+.container{
+  height: 100%;
+  align-content: center;
+}
+
+.card{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 500px;
+}
+
+.card-header h3{
+  color: #2E2EFE;
+  text-align: center;
+}
+
+.input-group-prepend label{
+  width: 190px;
+  background-color: #BCF5A9;
+  color: black;
+  border:0 !important;
+}
+
+input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+
+}
+
+.signup_btn{
+  color: black;
+  background-color: #FFC312;
+}
+
+.signup_btn:hover{
+color: black;
+background-color: white;
+}

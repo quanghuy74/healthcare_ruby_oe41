@@ -50,7 +50,34 @@ vi:
     register_service: "Đăng ký dịch vụ"
     our_gallery: "Hình ảnh của chúng tôi"
     our_medical_camp: "Trung Tâm Y Tế "
-  
+
   staff:
     our_staff: "Nhân viên của chúng tôi"
     our_specialist: "Chuyên Gia Của Chúng Tôi"
+
+  activerecord:
+    models:
+      account : Accounts
+    attributes:
+      account:
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"
+        full_name: "Họ và tên"
+        address: "Địa chỉ"
+        card_id: "CMND"
+        phone_number: "Điện thoại"
+
+  views:
+    accounts:
+      new:
+        title: "Đăng kí"
+        btn_signup: "Tạo tài khoản"
+
+  controller:
+    accounts:
+      create:
+        succsess: "Chào mừng đến với website chăm sóc sức khỏe!"
+        danger: "Đăng kí không thành công"
+      load_account:
+        error: "Không tìm thấy tài khoản"

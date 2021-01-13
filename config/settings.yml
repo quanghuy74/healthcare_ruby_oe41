@@ -1,0 +1,9 @@
+account:
+  email:
+    max_length: 50
+  name:
+    max_length: 50
+  password:
+    min_length: 8
+  public:
+    max_lenght: 255
