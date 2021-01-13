@@ -1,0 +1,42 @@
+$blue-card-header: #2E2EFE;
+$light-green-header: #BCF5A9;
+$light-yealow: #FFC312;
+
+.container-signup{
+  height: 100%;
+  align-content: center;
+}
+
+.card{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 500px;
+}
+
+.card-header h3{
+  color: $blue-card-header;
+  text-align: center;
+}
+
+.input-group-prepend label{
+  width: 190px;
+  background-color: $light-green-header;
+  color: black;
+  border:0 !important;
+}
+
+input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+
+}
+
+.signup_btn{
+  color: black;
+  background-color: $light-yealow;
+}
+
+.signup_btn:hover{
+color: black;
+background-color: white;
+}

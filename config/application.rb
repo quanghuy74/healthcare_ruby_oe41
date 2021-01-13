@@ -9,6 +9,6 @@ module HealthcareRubyOe41
     config.load_defaults 6.1
 
     config.i18n.available_locales = [:en, :vi]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :vi
   end
 end
