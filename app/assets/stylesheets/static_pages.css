@@ -1,0 +1,30 @@
+/* ===================header======================= */
+.flag-group img {
+  width: 20px;
+}
+header{
+  padding-bottom: 100px;
+}
+
+/* ===================about element======================= */
+.gallery1 {
+  background-image: url("gallery/gallery1.png");
+}
+.gallery2 {
+  background-image: url("gallery/gallery2.png");
+}
+.gallery3 {
+  background-image: url("gallery/gallery3.png");
+}
+.gallery4 {
+  background-image: url("gallery/gallery4.png");
+}
+.gallery5 {
+  background-image: url("gallery/gallery5.png");
+}
+.gallery6 {
+  background-image: url("gallery/gallery6.png");
+}
+.footer-bg {
+  background-image: url("gallery/footer_bg.jpg");
+}

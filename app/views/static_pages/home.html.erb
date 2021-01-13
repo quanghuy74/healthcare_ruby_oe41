@@ -1,0 +1,199 @@
+<% provide(:title, t("title.home")) %>
+<!--? slider Area Start-->
+<div class="slider-area position-relative">
+  <!-- Single Slider -->
+  <div class="single-slider slider-height d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
+          <div class="hero__caption">
+            <span><b><%= t "home.committed" %></b></span>
+            <h1 class="cd-headline letters scale">
+              <%= t "home.care"%>
+              <strong class="cd-words-wrapper">
+                <b class="is-visible" style="opacity: 1"
+                  ><%= t "home.health" %></b
+                >
+              </strong>
+            </h1>
+            <p data-animation="fadeInLeft" data-delay="0.1s">
+              <%= t "home.slide_content" %>
+            </p>
+            <%= link_to "#", class: "btn" do%>
+              <%= t "home.appointment" %>
+              <i class="ti-arrow-right"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- slider Area End-->
+<!--? About Start-->
+<div class="about-area section-padding2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-10">
+        <div class="about-caption mb-50">
+          <!-- Section Tittle -->
+          <div class="section-tittle section-tittle2 mb-35">
+            <span><b><%= t("about.about_our_company") %></b></span>
+            <h1><%= t("about.welcome") %></h1>
+          </div>
+          <p><%= t("about.content") %></p>
+          <div class="about-btn1 mb-30">
+            <%= link_to about_path, class: "btn" do%>
+              <%= t("about.our_staff") %>
+              <i class="ti-arrow-right"></i>
+            <% end %>
+            
+          </div>
+          <div class="about-btn1 mb-30">
+            <%= link_to about_path, class: "btn" do%>
+              <%= t("about.register_service") %>
+              <i class="ti-arrow-right"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <!-- about-img -->
+        <div class="about-img">
+          <div class="about-font-img d-none d-lg-block">
+            <%= image_tag("gallery/about2.png") %>
+          </div>
+          <div class="about-back-img">
+            <%= image_tag("gallery/about1.png") %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About  End-->
+<!--? Gallery Area Start -->
+<div class="gallery-area section-padding30">
+  <div class="container">
+    <!-- Section Tittle -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-tittle text-center mb-100">
+          <span><%= t("about.our_gallery") %></span>
+          <h1><%= t("about.our_medical_camp") %></h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Left -->
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="single-gallery mb-30">
+              <%= image_tag("gallery/about2.png")%>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img small-img gallery2"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img small-img gallery3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right -->
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img small-img gallery4"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img small-img gallery5"></div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img big-img gallery6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Gallery Area End -->
+<!--? All startups Start -->
+<div class="all-starups-area testimonial-area fix">
+  <!-- left Contents -->
+  <div class="starups">
+    <!--? Testimonial Start -->
+    <div class="h1-testimonial-active">
+      <!-- Single Testimonial -->
+      <div class="single-testimonial text-center">
+        <!-- Testimonial Content -->
+        <div class="testimonial-caption">
+          <div class="testimonial-top-cap">
+            <p><%= t "home.quote" %></p>
+          </div>
+          <!-- founder -->
+          <div class="testimonial-founder d-flex align-items-center justify-content-center">
+            <div class="founder-img">
+              <%= image_tag("gallery/Homepage_testi.png") %>
+            </div>
+            <div class="founder-text">
+              <span><%= t "home.name" %></span>
+              <p><%= t "home.job" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+  </div>
+  <!--Right Contents  -->
+  <div class="starups-img"></div>
+</div>
+<!--All startups End -->
+<!--? Team Start -->
+<div class="team-area section-padding30">
+  <div class="container">
+    <!-- Section Tittle -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-tittle text-center mb-100">
+          <span><%= t "staff.our_staff" %></span>
+          <h2><%= t "staff.our_specialist" %></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- single Tem -->
+
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+        <div class="single-team mb-30">
+          <div class="team-img"><%= image_tag("gallery/team1.png") %></div>
+          <div class="team-caption">
+
+            <h3><%= link_to t("home.name"), "#" %></h3>
+            <span><%= t "home.job" %></span>
+            <!-- Team social -->
+            <div class="team-social">
+              <%= link_to fa_icon("twitter"), "#" %>
+              <%= link_to fa_icon("globe"), "#" %>
+              <%= link_to fa_icon("facebook"), "#" %>
+              <%= link_to fa_icon("pinterest"), "#" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Team End -->

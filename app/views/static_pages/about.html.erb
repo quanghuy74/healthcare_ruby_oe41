@@ -1,0 +1,114 @@
+<!--? Hero Start -->
+<div class="slider-area2">
+  <div class="slider-height2 d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="hero-cap hero-cap2 text-center">
+            <h1 class="cd-headline letters scale">
+              <%= t("about.about_us") %>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hero End -->
+<!--? About Start-->
+<div class="about-area section-padding2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-10">
+        <div class="about-caption mb-50">
+          <!-- Section Tittle -->
+          <div class="section-tittle section-tittle2 mb-35">
+            <span><b><%= t("about.about_our_company") %></b></span>
+            <h1><%= t("about.welcome") %></h1>
+          </div>
+          <p><%= t("about.content") %></p>
+          <div class="about-btn1 mb-30">
+            <%= link_to "#" do%> <%= t("about.our_staff") %>
+            <i class="ti-arrow-right"></i>
+            <% end %>
+          </div>
+          <div class="about-btn1 mb-30">
+            <%= link_to "#" do%> <%= t("about.register_service") %>
+            <i class="ti-arrow-right"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <!-- about-img -->
+        <div class="about-img">
+          <div class="about-font-img d-none d-lg-block">
+            <%= image_tag("gallery/about2.png") %>
+          </div>
+          <div class="about-back-img">
+            <%= image_tag("gallery/about1.png") %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About  End-->
+
+<!--? Gallery Area Start -->
+<div class="gallery-area section-padding30">
+  <div class="container">
+    <!-- Section Tittle -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-tittle text-center mb-100">
+          <span><%= t("about.our_gallery") %></span>
+          <h1><%= t("about.our_medical_camp") %></h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Left -->
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="single-gallery mb-30">
+              <%= image_tag("gallery/about2.png")%>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img small-img gallery2"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img small-img gallery3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right -->
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img small-img gallery4"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img small-img gallery5"></div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="single-gallery mb-30">
+              <div class="gallery-img big-img gallery6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Gallery Area End -->

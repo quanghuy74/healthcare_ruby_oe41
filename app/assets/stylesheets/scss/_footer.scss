@@ -1,0 +1,192 @@
+$white: #fff;
+$gray-weak: #bdbdbd;
+$black: #000;
+$dark-blue: #233148;
+$purple: #3957ff;
+
+.footer-area {
+  background: $black;
+  .footer-top {
+    border-bottom: 1px solid $dark-blue;
+    .single-footer-caption {
+      .footer-logo {
+        margin-bottom: 30px;
+      }
+      .footer-pera {
+        .info1 {
+          line-height: 1.8;
+          margin-bottom: 35px;
+          color: $gray-weak;
+          @media #{$lg} {
+            font-size: 14px;
+          }
+          @media #{$xs} {
+            font-size: 14px;
+          }
+        }
+      }
+      .footer-number {
+        h4 {
+          color: $purple;
+          font-size: 30px;
+          font-weight: 500;
+          text-transform: capitalize;
+          span {
+            color: $white;
+          }
+        }
+        p {
+          color: $gray-weak;
+        }
+      }
+      .footer-tittle {
+        h4 {
+          color: $white;
+          font-family: $font_2;
+          font-size: 18px;
+          margin-bottom: 38px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+        ul {
+          li {
+            color: $gray-weak;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            a {
+              color: $gray-weak;
+              font-weight: 300;
+              &:hover {
+                color: $white;
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+      }
+      .footer-form {
+        margin-bottom: 30px;
+        form {
+          position: relative;
+          input {
+            width: 100%;
+            height: 43px;
+            padding: 10px 20px;
+            border: 0;
+            background: $black;
+            color: $white;
+            &::placeholder {
+              color: $white;
+              font-weight: 300;
+              font-size: 14px;
+            }
+          }
+          .form-icon {
+            button {
+              position: absolute;
+              top: 0px;
+              right: 0;
+              background: none;
+              border: 0;
+              cursor: pointer;
+              padding: 15px 22px;
+              background: #0a0f17;
+              line-height: 1;
+              color: $white;
+              font-size: 14px;
+              font-weight: 300;
+              color: $purple;
+            }
+          }
+        }
+      }
+
+      .footer-cap {
+        margin-bottom: 30px;
+        span {
+          color: $theme-color;
+          font-size: 16px;
+          font-weight: 300;
+          margin-bottom: 10px;
+          display: block;
+        }
+        p {
+          color: $gray-weak;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  //copy Right
+  .footer-bottom {
+    // border-top: 1px solid #1c2e4c;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    .footer-copy-right {
+      p {
+        color: $gray-weak;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 12px;
+        i {
+          color: $purple;
+        }
+        a {
+          color: $purple;
+          &:hover {
+            // color: $white;
+          }
+        }
+      }
+    }
+  }
+  // Instagram
+
+  // Footer SociaL
+  .footer-social {
+    span {
+      color: $white;
+      position: relative;
+      margin-right: 57px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 43px;
+        height: 2px;
+        background: $dark-blue;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -56px;
+      }
+    }
+    @media #{$md} {
+      float: left;
+      padding-top: 10px;
+    }
+    @media #{$sm} {
+      float: left;
+      padding-top: 10px;
+    }
+    @media #{$xs} {
+      float: left;
+      padding-top: 10px;
+    }
+    a {
+      color: #fff;
+      font-size: 14px;
+      padding-left: 25px;
+      i {
+        @include transition(0.4s);
+        transform: rotateY(0deg);
+      }
+      &:hover {
+        color: $white;
+        i {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+}
