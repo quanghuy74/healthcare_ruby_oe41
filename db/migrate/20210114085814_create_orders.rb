@@ -3,7 +3,7 @@ class CreateOrders < ActiveRecord::Migration[6.1]
     create_table :orders do |t|
       t.references :account, null: false, foreign_key: true
       t.integer :staff_id
-      t.text :depcription
+      t.text :description
       t.integer :status
       t.decimal :total_price
 
