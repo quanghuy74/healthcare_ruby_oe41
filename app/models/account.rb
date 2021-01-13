@@ -6,6 +6,8 @@ class Account < ApplicationRecord
     foreign_key: :reviewer_id, dependent: :destroy
   has_one_attached :image
 
+  attr_accessor :remember_token
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   VALID_CARDID_REGEX = /[0-9]{9}/.freeze
   VALID_PHONENUMBER_REGEX = /[0-9]{10}/.freeze
@@ -44,6 +46,25 @@ class Account < ApplicationRecord
 
   def display_image
     image.variant(resize_to_limit: [300, 300])
+  end
+
+  def self.new_token
+    SecureRandom.urlsafe_base64
+  end
+
+  def authenticated? remember_token
+    return false unless remember_digest
+
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  def remember
+    self.remember_token = Account.new_token
+    update_column :remember_digest, Account.digest(remember_token)
+  end
+
+  def forget
+    update_column(:remember_digest, nil)
   end
 
   private

@@ -26,6 +26,14 @@
             <%= f.password_field :password, class: "form-control", placeholder: :password %>
           </div>
 
+          <!-- remember -->
+          <div class="row align-items-center remember">
+            <%= f.label :remember_me, class: "checkbox inline" do %>
+              <%= f.check_box :remember_me %>
+              <%= t "views.sessions.new.remember" %>
+            <% end %>
+          </div>
+
           <!-- btn_signup -->
           <div class="form-group">
             <%= f.submit yield(:button_text), value: t("views.sessions.new.title"), class: "btn float-right login_btn" %>

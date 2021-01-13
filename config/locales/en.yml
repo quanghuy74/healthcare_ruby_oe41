@@ -76,7 +76,7 @@ en:
   error:
     one: "The form contains 1 error"
     other: "The form contains %{count} errors"
-        
+
 
   views:
     accounts:
@@ -98,7 +98,7 @@ en:
         avatar: "Avatar"
         update: "Update"
         cancel: "Cancel"
-        
+
     sessions:
       new:
         title: "Login"
@@ -106,7 +106,6 @@ en:
         ask_account: Don't have an account?
         signup: "Sign up now!"
         forgot_pass: "Forgot your password?"
-    
   controller:
     accounts:
       create:
