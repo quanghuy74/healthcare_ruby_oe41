@@ -4,11 +4,10 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
 
   get "/signup", to: "accounts#new"
-  post "/signup", to: "accounts#create"
-
+  get "sessions/new"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
+  get "/logout", to: "sessions#destroy"
 
-  resources :accounts, only: %i(new create show)
+  resources :accounts, only: %i(create show edit update)
 end

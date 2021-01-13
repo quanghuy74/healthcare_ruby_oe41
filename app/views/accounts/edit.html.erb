@@ -1,0 +1,35 @@
+<%= provide(:title, current_account.full_name) %>
+<div class="container section-padding">
+<h1>Edit profile</h1>
+
+  <%= form_for(current_account) do |f| %>
+    <%= render "shared/error_messages", object: f.object%>
+
+    <%= f.label :full_name, t("views.accounts.edit.name") %>
+    <%= f.text_field :full_name, class: "form-control" %>
+
+    <%= f.label :card_id, t("views.accounts.edit.card_id") %>
+    <%= f.number_field :card_id, class: "form-control" %>
+
+    <%= f.label :address, t("views.accounts.edit.address") %>
+    <%= f.text_field :address, class: "form-control" %>
+
+    <%= f.label :phone_number, t("views.accounts.edit.phone_number") %>
+    <%= f.number_field :phone_number, class: "form-control" %>
+
+    <%= f.label :email, t("views.accounts.edit.email") %>
+    <%= f.email_field :email, class: "form-control" %>
+    <br>
+    <%= f.label :gender, t("views.accounts.edit.gender") %>
+    <%= select_tag(:gender, options_for_select([t("male"), 0],[t("female"), 1] )) %>
+    <br>
+    <%= f.label :date_of_birth, t("views.accounts.edit.date_of_birth") %>
+    <%= f.date_field :date_of_birth, class: "form-control" %>
+
+    <%= f.label :image, t("views.accounts.edit.avatar") %>
+    <%= f.file_field :image, class: "form-control" %>
+
+    <%= f.submit t("views.accounts.edit.update"), class: "btn" %>
+  <% end %>
+</div>
+

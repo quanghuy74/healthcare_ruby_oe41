@@ -75,6 +75,8 @@ vi:
         address: "Địa chỉ"
         card_id: "CMND"
         phone_number: "Điện thoại"
+        image_error_format: "Chỉ chấp nhận file ảnh"
+        image_error_size: "Chỉ chấp ảnh dưới 5mb"
 
   error:
     one: "Thông tin của bạn mắc 1 lỗi"
@@ -86,6 +88,19 @@ vi:
         title: "Đăng kí"
         btn_signup: "Tạo tài khoản"
         btn_cancle: "Hủy"
+      show:
+        edit: "Chỉnh sửa"
+      edit:
+        name: "Họ Và Tên"
+        card_id: "CMND"
+        address: "Địa Chỉ"
+        phone_number: "Số Điện Thoại"
+        email: "Email"
+        gender: "Giới Tính"
+        date_of_birth: "Ngày Sinh"
+        avatar: "Ảnh đại diện"
+        update: "Cập nhật"
+        
     sessions:
       new:
         title: "Đăng nhập"
@@ -93,7 +108,7 @@ vi:
         ask_account: "Bạn không có tài khoản?"
         signup: "Đăng kí ngay!"
         forgot_pass: "Quên mật khẩu?"
-
+    
   controller:
     accounts:
       create:
@@ -101,6 +116,10 @@ vi:
         danger: "Đăng kí không thành công"
       load_account:
         error: "Không tìm thấy tài khoản"
+      update:
+        success: "Cập nhật thành công"
+        fail: "Cập nhật thất bại"
+
     sessions:
       create:
         success: "Đăng nhập thành công"
