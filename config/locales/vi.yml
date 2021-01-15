@@ -1,0 +1,56 @@
+vi:
+  title:
+    home: "Trang Chủ"
+    base: "Dịch vụ chăm sóc sức khỏe"
+
+  header:
+    title: "Health Care"
+    home: "Trang chủ"
+    about: "Giới thiệu"
+    staffs: "Nhân Viên"
+    services: "Dịch vụ"
+    contact: "Liên hệ"
+
+  footer:
+    email: "healthcare@healthcare.com"
+    phone: "0987654321"
+    address: "123 Tôn Đức Thắng"
+    copyright: "Bản quyền @2020 | Được thiết kế bởi "
+    my_company: " Health care"
+    about_content: "Chúng tôi hiểu rằng chăm sóc chất lượng không chỉ là cung cấp công nghệ hiện đại và 
+      chuyên môn lâm sàng. Do đó, chúng tôi cam kết cung cấp cho bạn dịch vụ chăm sóc chất lượng cao nhất,
+      được điều chỉnh để đáp ứng nhu cầu cá nhân của bạn, 
+      trong một môi trường hỗ trợ thúc đẩy quá trình chữa bệnh của bạn."
+
+  home:
+    committed: "Cam kết Hoàn thành"
+    care: "Chúng tôi quan tâm bạn về"
+    health: "Sức khỏe"
+    safety: "sự an toàn"
+    appointment: "Đặt lịch hẹn"
+    slide_content: "chúng tôi đảm bảo rằng bản sẽ được chăm sóc chu đáo 
+      vơi đội ngủ nhân viên nhiệt tình và thân thiện. 
+      bạn chắc chắn sẽ hài lòng với dịch vụ của chúng tôi."
+    quote: "Tôi đang ở độ tuổi mà tôi chỉ muốn có thân hình cân đối và cơ thể khỏe mạnh
+      là trách nhiệm của chúng ta! Vì vậy, hãy bắt đầu chăm sóc cơ thể của bạn và 
+      nó sẽ chăm sóc cho bạn. Ăn sạch sẽ chăm sóc sức khỏe cho bạn."
+    name: "Margaret Lawson"
+    job: "Bác sĩ"
+
+  about:
+    about_us: "Giới Thiệu"
+    about_our_company: "về công ty chúng tôi"
+    welcome: "Chào mừng đến với trung tâm của chúng tôi" 
+    content: "nơi bạn có thể mong đợi nhận được dịch vụ chăm sóc đẳng cấp thế giới ngay gần nhà.
+      Chúng tôi hiểu rằng chăm sóc chất lượng không chỉ là cung cấp công nghệ hiện đại và chuyên môn lâm sàng. 
+      Do đó, chúng tôi cam kết cung cấp cho bạn dịch vụ chăm sóc chất lượng cao nhất,
+      được điều chỉnh để đáp ứng nhu cầu cá nhân của bạn, 
+      trong một môi trường hỗ trợ thúc đẩy quá trình chữa bệnh của bạn."
+    our_staff: "Đội ngủ nhân viên"
+    register_service: "Đăng ký dịch vụ"
+    our_gallery: "Hình ảnh của chúng tôi"
+    our_medical_camp: "Trung Tâm Y Tế "
+  
+  staff:
+    our_staff: "Nhân viên của chúng tôi"
+    our_specialist: "Chuyên Gia Của Chúng Tôi"

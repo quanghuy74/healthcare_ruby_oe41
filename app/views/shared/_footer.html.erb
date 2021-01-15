@@ -1,0 +1,57 @@
+<footer>
+  <!--? Footer Start-->
+  <div class="footer-area section-bg footer-bg">
+    <div class="container">
+      <div class="footer-top footer-padding">
+        <div class="row d-flex justify-content-between">
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
+            <div class="single-footer-caption mb-50">
+              <!-- logo -->
+              <div class="footer-logo">
+              <%= link_to image_tag("logo/logo2_footer.png"), root_path %>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-5">
+            <div class="single-footer-caption mb-50">
+              <div class="footer-tittle">
+                <h4><%= t "about.about_us" %></h4>
+                <div class="footer-pera">
+                  <p class="info1"><%= t "footer.about_content" %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+            <div class="single-footer-caption mb-50">
+              <div class="footer-number mb-50">
+                <h4><%= t "footer.phone" %></h4>
+                <p><%= t "footer.email" %></p>
+                <p><%= t "footer.address" %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="row d-flex justify-content-between align-items-center">
+          <div class="col-xl-9 col-lg-8">
+            <div class="footer-copy-right">
+              <p><%= t "footer.copyright" %><%= link_to t("footer.my_company") %></p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4">
+            <!-- Footer Social -->
+            <div class="footer-social f-right">
+              <%= link_to fa_icon("twitter"), "#" %>
+              <%= link_to fa_icon("facebook"), "#" %>
+              <%= link_to fa_icon("globe"), "#" %>
+              <%= link_to fa_icon("instagram"), "#" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End-->
+</footer>

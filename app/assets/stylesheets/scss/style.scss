@@ -1,0 +1,21 @@
+// Default
+@import "variables";
+@import "mixins";
+@import "overlay";
+@import "common";
+@import "color";
+
+// Homepage1
+@import "headerMenu";
+@import "h1-hero";
+@import "about";
+@import "department";
+@import "all_startups";
+
+@import "gallery";
+@import "testimonial";
+@import "team";
+@import "footer";
+
+// Default Element Page
+@import "extend";

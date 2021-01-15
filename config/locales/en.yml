@@ -1,33 +1,52 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  title:
+    home: "Home"
+    base: "Health care services"
+
+  header:
+    title: "Health Care"
+    home: "Home"
+    about: "About"
+    staffs: "Staffs"
+    services: "Services"
+    contact: "Contact"
+
+  footer:
+    email: "healthcare@healthcare.com"
+    phone: "0987654321"
+    address: "123 Tôn Đức Thắng"
+    copyright: "Copyright @2020 | Designed With by "
+    my_company: " Health care"
+    about_content: We understand that quality care means more than just providing state-of-the-art technology and 
+      clinical expertise. As such, we are committed to providing you with the highest quality care,
+      tailored to meet your individual needs, in a supportive environment that promotes your healing."
+
+  home:
+    committed: "COMMITTED TO SUCCESS"
+    care: "WE CARE ABOUT YOUR"
+    health: "HEALTh"
+    safety: "safety"
+    appointment: "Appointment"
+    slide_content: "We guarantee that you will be taken care of with an enthusiastic 
+      and friendly staff. You will surely be satisfied with our service."
+    quote: “I am at an age where I just want to be fit and healthy our bodies are our responsibility!
+      So start caring for your body and it will care for you. Eat clean it will care for yout hard.”
+    name: "Margaret Lawson"
+    job: "Doctor"
+
+  about:
+    about_us: "About us"
+    about_our_company: "About our company"
+    welcome: "welcome to our hospital"  
+    content: "where you can expect to receive world-class care close to home.
+      We understand that quality care means more than just providing state-of-the-art technology and 
+      clinical expertise. As such, we are committed to providing you with the highest quality care,
+      tailored to meet your individual needs, in a supportive environment that promotes your healing."
+    our_staff: "our staff"
+    register_service: "register service"
+    our_gallery: "our gallery"
+    our_medical_camp: "Our Medical Camp"
+
+  staff:
+    our_staff: "Our Staffs"
+    our_specialist: "Our specialist"
