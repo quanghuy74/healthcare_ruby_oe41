@@ -106,6 +106,10 @@ vi:
     user_mailer:
       sub_active: "Kích hoạt tài khoản"
 
+  mailers:
+    user_mailer:
+      sub_active: "Kích hoạt tài khoản"
+
   views:
     accounts:
       new:
@@ -169,6 +173,19 @@ vi:
         btn_update: "Sửa đổi"
         btn_cancel: "Hủy"
         no_data: "Bạn không có đơn hàng nào"
+      show:
+        title: "Chi tiết hóa đơn"
+        s_name: "Dịch vụ"
+        start_date: "Ngày bắt đầu"
+        end_date: "Ngày kết thúc"
+        price: "Đơn giá"
+        num_day: "Tổng số ngày"
+        into_money: "Thành tiền"
+        total_money: "Tổng tiền"
+        name: "Họ tên"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        back: "Quay lại"
 
   controller:
     accounts:
@@ -198,6 +215,11 @@ vi:
     orders:
       index:
         danger: "Bạn chưa sử dụng dịch vụ nào"
+    orders:
+      index:
+        danger: "Bạn chưa sử dụng dịch vụ nào"
+      show:
+        danger: "Không tìm thấy yêu cầu dịch vụ"
   date:
     formats:
       default: "%d-%m-%Y"

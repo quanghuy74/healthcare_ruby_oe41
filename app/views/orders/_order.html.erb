@@ -1,6 +1,6 @@
 <tr>
   <th scope="row"><%= order.id %></th>
-  <td><%= link_to t("views.orders.index.btn_detail"), "#", class: "btn btn-danger" %></td>
+  <td><%= link_to t("views.orders.index.btn_detail"), order, class: "btn btn-danger" %></td>
   <td><%= order.status %></td>
   <td><%= l(order.created_at, format: :default) %></td>
   <td><%= link_to t("views.orders.index.btn_update"), "#", class: "btn btn-danger" %></td>
