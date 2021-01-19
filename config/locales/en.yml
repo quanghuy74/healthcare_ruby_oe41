@@ -99,6 +99,17 @@ en:
       staffs: "New staffs"
       revenue: "Revenue"
       reviews: "Reviews"
+    staff: 
+      id: "Id"
+      avatar: "Avatar"
+      full_name: "Full name"
+      workspace: "Workspace"
+      delete: "Delete"
+      edit: "Edit"
+      update: "Update"
+      create: "Create"
+    customer:
+      block: "block"
 
   staff_page:
     my_received_order: "My received order"
@@ -171,6 +182,8 @@ en:
         avatar: "Avatar"
         update: "Update"
         cancel: "Cancel"
+        major: "major"
+        workspace: "workspace"
       review:
         reviews: "%{total} Reviews"
         rate: "Post comment"
