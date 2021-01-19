@@ -1,0 +1,36 @@
+<div class="container section-padding">
+  <h1><%= t("views.accounts.edit.title") %></h1>
+
+  <%= form_for [:admin, @account] do |f| %>
+    <%= render "shared/error_messages", object: f.object%>
+
+    <%= f.label :full_name, t("views.accounts.edit.name") %>
+    <%= f.text_field :full_name, class: "form-control" %>
+
+    <%= f.label :address, t("views.accounts.edit.address") %>
+    <%= f.text_field :address, class: "form-control" %>
+
+    <%= f.label :phone_number, t("views.accounts.edit.phone_number") %>
+    <%= f.number_field :phone_number, class: "form-control" %>
+
+    <%= f.label :email, t("views.accounts.edit.email") %>
+    <%= f.email_field :email, class: "form-control" %>
+    <br>
+    <%= f.label :gender, t("views.accounts.edit.gender") %>
+    <%= f.select :gender, Account.genders.keys.to_a %>
+    <br>
+    <%= f.fields_for :license, @account.license  do |license| %>
+      <%= license.label :workspace, t("views.accounts.edit.workspace") %>
+      <%= license.text_field :workspace, class: "form-control" %>
+      <br>
+      <%= license.label :major_id, t("views.accounts.edit.major") %>
+      <%= license.collection_select :major_id, Major.order(:name), :id, :name, class: "form-control" %>
+    <% end %>
+
+    <br>
+    <%= f.label :image, t("views.accounts.edit.avatar") %>
+    <%= f.file_field :image, class: "form-control" %>
+    <br>
+    <%= f.submit t("admin.staff.update"), class: "btn" %>
+  <% end %>
+</div>

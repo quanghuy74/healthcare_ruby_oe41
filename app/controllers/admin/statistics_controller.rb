@@ -1,6 +1,8 @@
 class Admin::StatisticsController < ApplicationController
   layout "admin"
 
+  before_action :require_admin
+
   def index; end
 
   def accounts

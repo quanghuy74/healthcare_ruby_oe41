@@ -7,6 +7,19 @@
 
       <h3><%= link_to staff.full_name, staff %></h3>
       <span><%= staff.license.major.name %></span>
+      <% if staff.reviews.size == 0%>
+        <p><%= t "staff.no_review_yet" %></p>
+      <% else %>
+        <div class="rated">
+          <% for i in 1..5 do %>
+            <% if i <= staff.reviews.sum(:rate)/staff.reviews.size %>
+              <%= render "shared/star_checked" %>
+            <% else %>
+              <%= render "shared/star_unchecked" %>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
       <!-- Team social -->
       <div class="team-social">
         <%= link_to fa_icon("twitter"), "#" %>

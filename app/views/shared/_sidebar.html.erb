@@ -1,17 +1,16 @@
-
 <div class="sidebar-container">
   <div class="sidebar-logo">
     <%= t "header.title"%>
   </div>
   <ul class="sidebar-navigation">
     <li>
-      <%= link_to  "#"  do %>
+      <%= link_to admin_accounts_path do %>
         <%= fa_icon("home") %>
         <%= t ("admin.sidebar.manage_staffs")%>
       <% end %>
     </li>
     <li>
-      <%= link_to  "#"  do %>
+      <%= link_to admin_account_customer_path do %>
         <%= fa_icon("home") %>
         <%= t ("admin.sidebar.manage_users")%>
       <% end %>

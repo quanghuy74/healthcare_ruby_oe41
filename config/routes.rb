@@ -11,15 +11,20 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
+  delete "/remove_service", to: "carts#remove_service"
+  get "/remove_service", to: "carts#remove_service"
+
   resources :accounts
   resources :account_activations, only: :edit
   resources :services, only: %i(index show)
   resources :reviews, only: :destroy
-  resources :orders, only: %i(index show)
+  resources :orders, only: %i(index show create)
+  resources :carts, only: %i(create index show)
 
   resources :accounts do
     resources :reviews, only: :create
   end
+
 
   resources :services do
     resources :reviews, only: :create
@@ -30,9 +35,11 @@ Rails.application.routes.draw do
     get "statistics/staffs", to: "statistics#staffs"
     get "statistics/revenue", to: "statistics#revenue"
     get "statistics/reviews", to: "statistics#reviews"
+    get "account/customer", to: "accounts#index_customer"
 
     resources :orders, only: %i(index edit)
     resources :statistics, only: :index
+    resources :accounts
   end
 
   namespace :staff do

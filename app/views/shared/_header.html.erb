@@ -29,10 +29,14 @@
                     <li class="nav-item">
                       <%= link_to t("header.services"), services_path %>
                     </li>
+                    
                     <li class="nav-item">
                       <%= link_to t("header.contact"), "#" %>
                     </li>
                     <% if logged_in? %>
+                      <li class="nav-item">
+                        <%= link_to t("header.cart", count: @carts.length), carts_path %>
+                      </li>
                       <li class="dropdown">
                         <li>
                           <%= link_to current_account.full_name , root_path %>

@@ -8,6 +8,8 @@ class Account < ApplicationRecord
     foreign_key: :reviewer_id, dependent: :destroy
   has_one_attached :image
 
+  accepts_nested_attributes_for :license
+
   attr_accessor :remember_token, :activation_token
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
@@ -27,7 +29,8 @@ class Account < ApplicationRecord
   validates :full_name, presence: true
   validates :password, presence: true,
     length: {minimum: Settings.account.password.min_length}, allow_nil: true
-  validates :card_id, uniqueness: true, format: {with: VALID_CARDID_REGEX}
+  validates :card_id, uniqueness: true,
+            format: {with: VALID_CARDID_REGEX}, allow_nil: true
   validates :phone_number, uniqueness: true,
     format: {with: VALID_PHONENUMBER_REGEX}
   validates :address, presence: true
@@ -87,6 +90,8 @@ class Account < ApplicationRecord
   end
 
   def set_default_image
+    return unless image.nil?
+
     image.attach(io: File.open(Rails.root.join("app", "assets", "images",
                                                "gallery", "team1.png")),
       filename: "team1.png", content_type: "image/png")

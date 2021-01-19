@@ -1,0 +1,17 @@
+<%= link_to "add", new_admin_account_path, class: "btn" %>
+
+<table class="table">
+  <tr class="table-head">
+    <td><%= t "admin.staff.id" %></td>
+    <td><%= t "admin.staff.avatar" %></td>
+    <td><%= t "admin.staff.full_name" %></td>
+    <td><%= t "admin.staff.workspace" %></td>
+    <td><%= t "admin.staff.major" %></td>
+    <td><%= t "admin.staff.edit" %></td>
+    <td><%= t "admin.staff.delete" %></td>
+  </tr>
+  <% @staffs.each do |staff| %>
+    <%= render partial: "staff", locals: {staff: staff} %>
+  <% end %>
+</table>
+<%= will_paginate @staffs %>

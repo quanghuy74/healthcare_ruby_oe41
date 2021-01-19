@@ -1,0 +1,10 @@
+<tr>
+  <td><%= staff.id %></td>
+  <td><%= image_tag staff.image %></td>
+  <td><%= staff.full_name %></td>
+  <td><%= staff.license.workspace %></td>
+  <td><%= staff.license.major_name %></td>
+  <td><%= link_to t("admin.staff.edit"), edit_admin_account_path(staff), class: "btn-danger" %></td>
+  <td><%= link_to t("admin.staff.delete"), [:admin, staff], class: "btn-danger",
+    method: :delete, data: {confirm: t("views.accounts.review.you_sure")} %></td>
+</tr>

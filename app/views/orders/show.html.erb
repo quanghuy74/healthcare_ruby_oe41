@@ -12,12 +12,12 @@
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th scope="col"><%= t "views.orders.show.s_name" %></th>
-          <th scope="col"><%= t "views.orders.show.start_date" %></th>
-          <th scope="col"><%= t "views.orders.show.end_date" %></th>
-          <th scope="col"><%= t "views.orders.show.price" %></th>
-          <th scope="col"><%= t "views.orders.show.num_day" %></th>
-          <th scope="col"><%= t "views.orders.show.into_money" %></th>
+          <th><%= t "views.orders.show.s_name" %></th>
+          <th><%= t "views.orders.show.start_date" %></th>
+          <th><%= t "views.orders.show.end_date" %></th>
+          <th><%= t "views.orders.show.price" %></th>
+          <th><%= t "views.orders.show.num_day" %></th>
+          <th><%= t "views.orders.show.into_money" %></th>
         </tr>
       </thead>
       <tbody>
@@ -34,7 +34,7 @@
       </thead>
       <tbody>
         <tr>
-          <td><%= number_to_currency(total_money @order) %></td>
+          <td><b><%= @order.total_price %><%= t "admin.manage_order.vnd" %></b></td>
         </tr>
       </tbody>
       <thead class="thead-dark">

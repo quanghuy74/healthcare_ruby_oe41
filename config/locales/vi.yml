@@ -19,6 +19,7 @@ vi:
     admin_page: "Trang quản trị"
     staff_page: "Trang nhân viên"
     my_order: "Lịch sử dịch vụ"
+    cart: "lịch hẹn(%{count})"
 
   footer:
     email: "healthcare@healthcare.com"
@@ -66,6 +67,10 @@ vi:
     staffs: "Nhân viên"
     empty_filed: "Không tồn tại!!!"
     btn_search: "Tìm kiếm"
+<<<<<<< HEAD
+=======
+    no_review_yet: "Chưa có đánh giá nào"
+>>>>>>> add average star
 
   admin:
     sidebar:
@@ -102,6 +107,18 @@ vi:
       staffs: "Nhân Viên mới"
       revenue: "Doanh thu"
       reviews: "Đánh giá"
+    staff: 
+      id: "id"
+      avatar: "Ảnh đại diện"
+      full_name: "Họ và tên"
+      workspace: "chuyên môn"
+      delete: "xóa"
+      edit: "Sửa"
+      update: "Cập nhật"
+      create: "Tạo"
+    customer:
+      block: "Khóa"
+
   staff_page:
     customer_order: "Lịch hẹn có thể nhận"
     my_received_order: "lịch hẹn đã nhận"
@@ -111,6 +128,16 @@ vi:
     service: "Dịch vụ"
     money: "thành tiền"
     time: "thời gian"
+
+  cart:
+    service: "dịch vụ"
+    date: "thời gian"
+    price: "giá"
+    into_money: "Thành tiền"
+    total: "tổng tiền"
+    confirm: "xác nhận"
+    back_service: "Dịch vụ khác"
+    remove: "Xóa"
 
   activerecord:
     models:
@@ -156,6 +183,8 @@ vi:
         avatar: "Ảnh đại diện"
         update: "Cập nhật"
         cancel: "Hủy"
+        major: "major"
+        workspace: "workspace"
       review:
         reviews: "có %{total} đánh giá"
         rate: "đánh giá"
@@ -257,3 +286,6 @@ vi:
   notice:
     success: "Thành công"
     error: "Đã sảy ra lỗi"
+    service_exist: "service already exists"
+    validate_date: "ngày bắt đầu hoặc ngày kết thúc không hợp lệ"
+

@@ -5,8 +5,18 @@ class OrdersController < ApplicationController
     @orders = current_account.orders
   end
 
-  def show
-    @order_details = @order.order_details.includes(:service)
+  def create 
+    @order = Order.new(account_id: current_account.id,
+                        status: Order.statuses[:pending],
+                        total_price: total_money(@carts),
+                        order_details_attributes: @carts)
+    if @order.save
+      session[:cart] = []
+      flash[:success] = t "notice.success"
+    else
+      flash[:danger] = t "notice.error"
+    end
+    redirect_to services_path
   end
 
   private

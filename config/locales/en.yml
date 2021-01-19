@@ -19,6 +19,7 @@ en:
     admin_page: "Admin Page"
     staff_page: "Staff Page"
     my_order: "My orders"
+    cart: "cart(%{count})"
 
   footer:
     email: "healthcare@healthcare.com"
@@ -62,7 +63,11 @@ en:
     staffs: "Staffs"
     empty_filed: "Empty field!!!"
     btn_search: "Search"
+<<<<<<< HEAD
 
+=======
+    no_review_yet: "No review yet"
+>>>>>>> add average star
 
   admin:
     sidebar:
@@ -99,6 +104,17 @@ en:
       staffs: "New staffs"
       revenue: "Revenue"
       reviews: "Reviews"
+    staff: 
+      id: "Id"
+      avatar: "Avatar"
+      full_name: "Full name"
+      workspace: "Major"
+      delete: "Delete"
+      edit: "Edit"
+      update: "Update"
+      create: "Create"
+    customer:
+      block: "block"
 
   staff_page:
     my_received_order: "My received order"
@@ -109,6 +125,18 @@ en:
     service: "Service"
     money: "money"
     time: "time"
+  
+  cart:
+    service: "Service"
+    date: "date"
+    price: "price"
+    into_money: "into_money"
+    total: "total"
+    confirm: "confirm"
+    back_service: "other service"
+    remove: "remove"
+    start_date: "start date"
+    end_date: "end date"
 
   activerecord:
     models:
@@ -128,10 +156,6 @@ en:
     one: "The form contains 1 error"
     other: "The form contains %{count} errors"
     permit: "you don't have permit"
-
-  mailers:
-    user_mailer:
-      sub_active: "Account activation"
 
   mailers:
     user_mailer:
@@ -157,6 +181,8 @@ en:
         avatar: "Avatar"
         update: "Update"
         cancel: "Cancel"
+        major: "major"
+        workspace: "workspace"
       review:
         reviews: "%{total} Reviews"
         rate: "Post comment"
@@ -238,10 +264,6 @@ en:
     services:
       load:
         danger: "Not found service"
-
-    orders:
-      index:
-        danger: "You have not used any service"
     orders:
       index:
         danger: "You have not used any service"
@@ -258,3 +280,5 @@ en:
   notice:
     success: "Success"
     error: "error"
+    service_exist: "service already exists"
+    validate_date: "validate date, please check start date and end date"

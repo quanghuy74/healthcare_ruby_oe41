@@ -40,6 +40,19 @@
           <td><%= @account.phone_number %></td>
         </tr>
       </table>
+      <% if @account.reviews.size == 0%>
+    <p><%= t "staff.no_review_yet" %></p>
+      <% else %>
+        <div class="rated">
+          <% for i in 1..5 do %>
+            <% if i <= @account.reviews.sum(:rate)/@account.reviews.size %>
+              <%= render "shared/star_checked" %>
+            <% else %>
+              <%= render "shared/star_unchecked" %>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

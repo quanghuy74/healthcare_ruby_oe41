@@ -7,7 +7,7 @@ class ServicesController < ApplicationController
       Service.by_name(params[:term].strip)
     else
       Service
-    end.includes(:major).newest_first.paginate page: params[:page],
+    end.includes(:major, :reviews).newest_first.paginate page: params[:page],
                               per_page: perpage
   end
 
