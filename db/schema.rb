@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_01_16_051714) do
   create_table "orders", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "account_id", null: false
     t.integer "staff_id"
-    t.text "depcription"
+    t.text "description"
     t.integer "status"
     t.decimal "total_price", precision: 10
     t.datetime "created_at", precision: 6, null: false
