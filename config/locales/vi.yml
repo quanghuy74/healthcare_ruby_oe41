@@ -95,6 +95,11 @@ vi:
       accept: "Chấp nhận"
       reject: "Từ Chối"
       vnd: " VND"
+    statistic:
+      customers: "Khách hàng mới"
+      staffs: "Nhân Viên mới"
+      revenue: "Doanh thu"
+      reviews: "Đánh giá"
   staff_page:
     customer_order: "Lịch hẹn có thể nhận"
     my_received_order: "lịch hẹn đã nhận"
