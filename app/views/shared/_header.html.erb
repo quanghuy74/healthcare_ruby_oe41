@@ -32,9 +32,36 @@
                     <li class="nav-item">
                       <%= link_to t("header.contact"), "#" %>
                     </li>
-                    <li class="nav-item">
-                      <%= link_to t("header.signup"), signup_path %>
-                    </li>
+                    <% if logged_in? %>
+                      <li class="dropdown">
+                        <li>
+                          <%= link_to current_account.full_name , root_path %>
+                          <ul class="submenu">
+                            <% if current_account.admin? %>
+                              <li>
+                                <%= link_to t("header.admin_page"), "#" %>
+                              </li>
+                            <% elsif current_account.staff? %>
+                              <li>
+                                <%= link_to t("header.staff_page"), "#" %>
+                              </li>
+                            <% end %>
+                            <li><%= link_to t("header.profile"), "#" %></li>
+                            <li><%= link_to t("header.change_pass"), "#" %></li>
+                            <li><%= link_to t("header.update_profile"), "#" %></li>
+                            <li class="divider"></li>
+                            <li><%= link_to t("header.logout"), logout_path, method: :delete %></li>
+                          </ul>
+                        </li>
+                      </li>
+                    <% else %>
+                      <li class="nav-item">
+                        <%= link_to t("header.signup"), signup_path %>
+                      </li>
+                      <li class="nav-item">
+                        <%= link_to t("header.login"), login_path %>
+                      </li>
+                    <% end %>
                   </ul>
                 </nav>
               </div>

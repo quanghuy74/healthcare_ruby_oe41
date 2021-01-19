@@ -11,6 +11,13 @@ en:
     services: "Services"
     contact: "Contact"
     signup: "Signup"
+    login: "Login"
+    profile: "Profile"
+    update_profile: "Update profile"
+    logout: "Log out"
+    change_pass: "Change password"
+    admin_page: "Admin Page"
+    staff_page: "Staff Page"
 
   footer:
     email: "healthcare@healthcare.com"
@@ -75,6 +82,14 @@ en:
         title: "Sign up"
         btn_signup: "Create my account"
         btn_cancle: "Cancle"
+    sessions:
+      new:
+        title: "Login"
+        remember: "Remember Me"
+        ask_account: Don't have an account?
+        signup: "Sign up now!"
+        forgot_pass: "Forgot your password?"
+
   controller:
     accounts:
       create:
@@ -82,3 +97,7 @@ en:
         danger: "Signup was not successul"
       load_account:
         error: "Not found account"
+    sessions:
+      create:
+        success: "Login success"
+        danger: "Invalid email/password combination"

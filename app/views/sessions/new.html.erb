@@ -1,0 +1,46 @@
+<% provide(:title, t("views.sessions.new.title")) %>
+<div class="container signup container-sign">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+
+      <!--title-->
+      <div class="card-header">
+        <h3><%= t "views.sessions.new.title" %></h3>
+      </div>
+      <div class="card-body">
+        <%= form_for(:session, url: login_path) do |f| %>
+
+          <!-- email-->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :email, class:"input-group-text"  %>
+            </div>
+            <%= f.email_field :email, class: "form-control", placeholder: :email %>
+          </div>
+
+          <!-- password-->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :password, class:"input-group-text"  %>
+            </div>
+            <%= f.password_field :password, class: "form-control", placeholder: :password %>
+          </div>
+
+          <!-- btn_signup -->
+          <div class="form-group">
+            <%= f.submit yield(:button_text), value: t("views.sessions.new.title"), class: "btn float-right login_btn" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          <%= t "views.sessions.new.ask_account" %>
+          <%= link_to t("views.sessions.new.signup"), signup_path %>
+        </div>
+        <div class="d-flex justify-content-center links">
+          <%= link_to t("views.sessions.new.forgot_pass"), "#" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

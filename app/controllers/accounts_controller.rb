@@ -9,7 +9,8 @@ class AccountsController < ApplicationController
     @account = Account.new accounts_params
     if @account.save
       flash[:success] = t "controller.accounts.create.succsess"
-      redirect_to @account
+      log_in @account
+      redirect_to root_path
     else
       flash.now[:danger] = t "controller.accounts.create.danger"
       render :new
