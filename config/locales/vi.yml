@@ -93,6 +93,10 @@ vi:
     user_mailer:
       sub_active: "Kích hoạt tài khoản"
 
+  mailers:
+    user_mailer:
+      sub_active: "Kích hoạt tài khoản"
+
   views:
     accounts:
       new:
@@ -136,7 +140,16 @@ vi:
       link_active: "Kích hoạt"
 
     services:
+<<<<<<< HEAD
         title: "Dịch vụ"
+=======
+      title: "Dịch vụ"
+      show:
+        title: "Chi tiết dịch vụ"
+        btn_back: "Quay lại"
+        btn_add: "Chọn dịch vụ"
+        btn_review: "Đánh giá"
+>>>>>>> review service
 
   controller:
     accounts:
@@ -159,7 +172,10 @@ vi:
       edit:
         success: "Tài khoản đã được kích hoạt"
         danger: "Đường dẫn không hợp lệ"
+<<<<<<< HEAD
 
+=======
+>>>>>>> review service
   date:
     formats:
       default: "%d-%m-%Y"

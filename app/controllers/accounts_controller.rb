@@ -12,6 +12,7 @@ class AccountsController < ApplicationController
     @account = Account.new accounts_params
     if @account.save
       @account.send_activation_email
+      flash[:success] = t "controller.accounts.create.succsess"
       flash[:info] = t "controller.accounts.create.info"
       redirect_to root_path
     else
@@ -20,7 +21,10 @@ class AccountsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @reviews = @account.reviews.paginate page: params[:page],
+                per_page: Settings.account.staff.per_page
+  end
 
   def edit; end
 
@@ -42,7 +46,9 @@ class AccountsController < ApplicationController
     params.require(:account).permit(:email, :password,
                                     :password_confirmation,
                                     :full_name, :address,
-                                    :card_id, :phone_number)
+                                    :card_id, :phone_number,
+                                    :date_of_birth)
+          .with_defaults(date_of_birth: Time.zone.now)
   end
 
   def update_account_params

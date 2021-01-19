@@ -1,11 +1,11 @@
-<div class="col-lg-8 col-md-12 border-item post-list">
   <div class="comments-area">
-    <h1><%= t("views.accounts.review.reviews", total: @account.reviews.count) %></h1>
+    <h1><%= t("views.accounts.review.reviews", total: reviewable.reviews.count) %></h1>
     <div class="comment-list">
-      <% @account.reviews.each do |review| %>
+      <% @reviews.each do |review| %>
         <%= render partial: "reviews/review", locals: {review: review} %>
       <% end %>
+      <%= will_paginate @reviews %>
     </div>
   </div>
-  <%= render "reviews/form_review" if logged_in?%>
+  <%= render partial: "reviews/form_review", locals: {reviewable: reviewable} if logged_in?%>
 </div>

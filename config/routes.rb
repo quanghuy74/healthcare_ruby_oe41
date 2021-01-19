@@ -14,5 +14,13 @@ Rails.application.routes.draw do
   resources :accounts
   resources :account_activations, only: :edit
   resources :reviews, only: %i(create destroy)
-  resources :services, only: :index
+  resources :services, only: %i(index show)
+
+  resources :accounts do
+    resources :reviews, only: :create
+  end
+
+  resources :services do
+    resources :reviews, only: :create
+  end
 end

@@ -115,6 +115,10 @@ en:
         fail: "fail"
         you_sure: "are your sure?"
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> review service
     sessions:
       new:
         title: "Login"
@@ -132,6 +136,14 @@ en:
 
     services:
       title: "Services"
+<<<<<<< HEAD
+=======
+      show:
+        title: "Detail service"
+        btn_back: "Come back"
+        btn_add: "Add to cart"
+        btn_review: "Review"
+>>>>>>> review service
 
   controller:
     accounts:
@@ -153,7 +165,10 @@ en:
       edit:
         success: "Account activated!"
         danger: "Invalid activation link"
+<<<<<<< HEAD
 
+=======
+>>>>>>> review service
   date:
     formats:
       default: "%Y-%m-%d"

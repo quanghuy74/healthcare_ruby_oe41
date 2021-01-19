@@ -23,7 +23,8 @@ class ReviewsController < ApplicationController
   private
 
   def review_staff_params
-    params.require(:review).permit(:content, :rate, :reviewable_id, :reviewable_type)
+    params.require(:review)
+          .permit(:content, :rate, :reviewable_id, :reviewable_type)
   end
 
   def correct_account
