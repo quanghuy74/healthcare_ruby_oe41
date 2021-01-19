@@ -12,4 +12,6 @@ class Order < ApplicationRecord
 
   scope :get_by_status, ->(status){where status: status}
   delegate :full_name, :address, :phone_number, to: :account, prefix: :account
+
+  accepts_nested_attributes_for :order_details
 end

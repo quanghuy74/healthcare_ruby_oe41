@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: :edit
   resources :services, only: %i(index show)
   resources :reviews, only: :destroy
-  resources :orders, only: %i(index show)
+  resources :orders, only: %i(index show create)
 
   resources :accounts do
     resources :reviews, only: :create
@@ -41,4 +41,8 @@ Rails.application.routes.draw do
     resources :work_histories, only: %i(index update)
     resources :staffs, only: %i(index update)
   end
+
+  resources :carts, only: %i(create index show)
+  delete "/remove_service", to: "carts#remove_service"
+  get "/remove_service", to: "carts#remove_service"
 end

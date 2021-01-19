@@ -6,14 +6,12 @@ module OrdersHelper
     into_money
   end
 
-  def total_money order
-    order.order_details.reduce(0) do |sum, o|
-      sum + o.into_money
-    end
+  def total_money(carts)
+    carts.reduce(0) { |sum, cart| sum + cart["into_money"] }
   end
 
   def count_day order_detail
-    (order_detail.end_date - order_detail.start_date).to_i
+    (order_detail.end_date - order_detail.start_date).to_i + 1
   end
 
   def number_to_currency(number)
