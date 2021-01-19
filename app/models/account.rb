@@ -1,5 +1,7 @@
 class Account < ApplicationRecord
   has_many :orders, dependent: :destroy
+  has_many :received_orders, class_name: Order.name,
+    foreign_key: :staff_id, dependent: :destroy
   has_one :license, dependent: :destroy
   has_many :reviews, as: :reviewable, dependent: :destroy
   has_many :rated_reviews, class_name: Review.name,

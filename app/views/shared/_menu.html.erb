@@ -1,0 +1,27 @@
+
+<div class="sidebar-container">
+  <div class="sidebar-logo">
+    <%= t "header.title"%>
+  </div>
+  <ul class="sidebar-navigation">
+    <li>
+      <%= link_to  staff_staffs_path  do %>
+        <%= fa_icon("home") %>
+        <%= t ("staff_page.customer_order")%>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to  staff_my_received_order_path  do %>
+        <%= fa_icon("home") %>
+        <%= t ("staff_page.my_receive_order")%>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to  staff_work_histories_path  do %>
+        <%= fa_icon("home") %>
+        <%= t ("staff_page.work_histories")%>
+      <% end %>
+    </li>
+  </ul>
+</div>
+

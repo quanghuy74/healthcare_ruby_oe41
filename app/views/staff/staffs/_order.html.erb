@@ -1,0 +1,29 @@
+<tbody class="order">
+  <tr >
+    <th colspan="2" class="table-head"><%= t "admin.manage_order.order" %><%= order.id %></th>
+    <th class="table-head"><%= t "admin.manage_order.status" %><%= order.status %></th>
+  </tr>
+  <tr>
+    <th><%= t "admin.manage_order.address" %></th>
+    <th><%= order.account_address %></th>
+    <th><%= link_to(t("admin.manage_order.receive"), staff_staff_path(id: order), method: "patch", class: "btn") if order.approved? %></th>
+  </tr>
+  <tr >
+    <th><%= t "admin.manage_order.phone_number" %></th>
+    <th><%= order.account_phone_number %></th>
+    <th></th>
+  
+  </tr>
+  <tr >
+    <th><%= t "admin.manage_order.description" %></th>
+    <th><%= order.description %></th>
+    <th></th>
+
+  </tr>
+  <tr>
+    <th colspan="2"><%= t "admin.manage_order.total" %></th>
+    <td><b><%= order.order_details.sum(:into_money) %><%= t "admin.manage_order.vnd" %></b></td>
+  </tr>
+  <%= render partial: "order_detail", collection: order.order_details %>
+</tbody>
+

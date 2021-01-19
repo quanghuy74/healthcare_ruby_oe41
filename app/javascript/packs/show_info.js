@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$( document ).on('turbolinks:load', function() {
   $("tbody").click(function (event) {
     var target = $(event.target);
     var element = target.parent().parent().children(".info");

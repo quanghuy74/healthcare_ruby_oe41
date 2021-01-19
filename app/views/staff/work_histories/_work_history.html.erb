@@ -1,0 +1,6 @@
+<tr>
+  <td><%= work_history.id %></td>
+  <td><%= work_history.service.name %></td>
+  <td><%= work_history.into_money %> <%= t "admin.manage_order.vnd" %></td>
+  <td><%= l work_history.updated_at, format: :long %></td>
+</tr>
