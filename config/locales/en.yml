@@ -106,6 +106,10 @@ en:
       review:
         reviews: "%{total} Reviews"
         rate: "Post comment"
+        enter_comment: "Please enter comment"
+        success: "Success"
+        fail: "fail"
+        you_sure: "are your sure?"
 
     sessions:
       new:

@@ -112,6 +112,10 @@ vi:
       review:
         reviews: "có %{total} đánh giá"
         rate: "đánh giá"
+        enter_comment: "Nhập đánh giá của bạn"
+        success: "Thành công"
+        fail: "Thất Bại"
+        you_sure: "bạn có chắc không?"
 
     sessions:
       new:

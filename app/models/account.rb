@@ -17,6 +17,7 @@ class Account < ApplicationRecord
   before_save :downcase_email
   before_create :set_default_image
   before_create :create_activation_digest
+  before_create :set_default_birthday
   has_secure_password
 
   validates :email, presence: true,
@@ -86,6 +87,10 @@ class Account < ApplicationRecord
     image.attach(io: File.open(Rails.root.join("app", "assets", "images",
                                                "gallery", "team1.png")),
       filename: "team1.png", content_type: "image/png")
+  end
+
+  def set_default_birthday
+    self.date_of_birth ||= Time.now
   end
 
   def create_activation_digest

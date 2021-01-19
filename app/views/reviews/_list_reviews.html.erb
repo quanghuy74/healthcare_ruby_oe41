@@ -7,5 +7,5 @@
       <% end %>
     </div>
   </div>
-  <%= render "reviews/form_review" %>
+  <%= render "reviews/form_review" if logged_in?%>
 </div>

@@ -1,0 +1,119 @@
+$gray: #999999;
+
+.comments-area {
+  background: transparent;
+
+  @media (max-width: 414px) {
+    padding: 50px 8px;
+  }
+
+  h4 {
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .comment-list {
+    padding-bottom: 48px;
+
+    &:last-child {
+      padding-bottom: 0px;
+    }
+
+    &.left-padding {
+      padding-left: 25px;
+    }
+
+    @media (max-width: 413px) {
+      .single-comment {
+        h5 {
+          font-size: 12px;
+        }
+
+        .date {
+          font-size: 11px;
+        }
+
+        .comment {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .thumb {
+    margin-right: 20px;
+
+    img {
+      width: 70px;
+      border-radius: 50%;
+    }
+  }
+
+  .date {
+    font-size: 14px;
+    color: $gray;
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+
+  .comment {
+    margin-bottom: 10px;
+    color: $gray;
+    font-size: 15px;
+  }
+
+  .btn-reply {
+    background-color: transparent;
+    color: $gray;
+    padding: 5px 18px;
+    font-size: 14px;
+    display: block;
+    font-weight: 400;
+  }
+}
+/****** Style Star Rating Widget *****/
+.rating {
+  border: none;
+  float: left;
+}
+.rating > input {
+  display: none;
+}
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+.rating > label {
+  color: gainsboro;
+  float: right;
+}
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: orange;
+}
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: orange;
+}
+
+.checked {
+  color: orange;
+}
+
+.btn-delete {
+  padding: 10px;
+  color: red;
+  border: 1px solid gainsboro;
+  background-color: gainsboro;
+}

@@ -99,7 +99,7 @@ order_details.each { |order_detail|
 accounts.each { |account|
   5.times do |n|
     account.reviews.create!(
-      reviewer_id: account.id,
+      reviewer_id: Faker::Number.within(range: 1..Account.count),
       content: Faker::Lorem.sentence(word_count: 10),
       rate: Faker::Number.within(range: 1..5),
       reviewable_id:Faker::Number.within(range: 1..Account.count),
