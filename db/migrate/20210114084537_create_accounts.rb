@@ -7,7 +7,6 @@ class CreateAccounts < ActiveRecord::Migration[6.1]
       t.integer :gender, default: 0
       t.string :card_id
       t.string :address
-      t.string :avatar
       t.integer :role, null: false, default: 0
       t.integer :status, default: 1
       t.string :password_digest

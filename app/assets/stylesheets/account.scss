@@ -1,43 +1,42 @@
-$blue-card-header: #2E2EFE;
-$light-green-header: #BCF5A9;
-$light-yealow: #FFC312;
-$gray: #cdd2da; 
+$blue-card-header: #2e2efe;
+$light-green-header: #bcf5a9;
+$light-yealow: #ffc312;
+$gray: #999999;
 
-.container-signup{
+.container-signup {
   height: 100%;
   align-content: center;
 }
 
-.card{
+.card {
   margin-top: 40px;
   margin-bottom: 40px;
   width: 500px;
 }
 
-.card-header h3{
+.card-header h3 {
   color: $blue-card-header;
   text-align: center;
 }
 
-.input-group-prepend label{
+.input-group-prepend label {
   width: 190px;
   background-color: $light-green-header;
   color: black;
-  border:0 !important;
+  border: 0 !important;
 }
 
-input:focus{
-  outline: 0 0 0 0  !important;
+input:focus {
+  outline: 0 0 0 0 !important;
   box-shadow: 0 0 0 0 !important;
-
 }
 
-.signup_btn{
+.signup_btn {
   color: black;
   background-color: $light-yealow;
 }
 
-.signup_btn:hover{
+.signup_btn:hover {
   color: black;
   background-color: white;
 }
@@ -49,4 +48,116 @@ input:focus{
 .border-item {
   border: 1px solid $gray;
 }
+
+.comments-area {
+  background: transparent;
+
+  @media (max-width: 414px) {
+    padding: 50px 8px;
+  }
+
+  h4 {
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .comment-list {
+    padding-bottom: 48px;
+
+    &:last-child {
+      padding-bottom: 0px;
+    }
+
+    &.left-padding {
+      padding-left: 25px;
+    }
+
+    @media (max-width: 413px) {
+      .single-comment {
+        h5 {
+          font-size: 12px;
+        }
+
+        .date {
+          font-size: 11px;
+        }
+
+        .comment {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .thumb {
+    margin-right: 20px;
+
+    img {
+      width: 70px;
+      border-radius: 50%;
+    }
+  }
+
+  .date {
+    font-size: 14px;
+    color: $gray;
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+
+  .comment {
+    margin-bottom: 10px;
+    color: $gray;
+    font-size: 15px;
+  }
+
+  .btn-reply {
+    background-color: transparent;
+    color: $gray;
+    padding: 5px 18px;
+    font-size: 14px;
+    display: block;
+    font-weight: 400;
+  }
+}
+
+
+.pagination {
+  margin-top: 80px;
+  margin-left: 35%;
+  
+}
+
+.pagination a, em {
+  font-size: 14px;
+  position: relative;
+  display: block;
+  padding: 0;
+  text-align: center;
+  // padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 45px;
+  width: 45px;
+  height: 45px;
+  border-radius: 0 !important;
+  color: $gray;
+  border: 1px solid $gray;
+  margin-right: 10px;
+
+  i,
+  span {
+      font-size: 13px;
+  }
+
+  &:hover {
+      background-color: blue;
+      color: white;
+  }
+}
+
 

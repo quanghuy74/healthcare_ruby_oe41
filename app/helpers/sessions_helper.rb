@@ -36,4 +36,8 @@ module SessionsHelper
     session.delete(:account_id)
     @current_account = nil
   end
+
+  def current_account? account
+    account && account == current_account
+  end
 end

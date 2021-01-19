@@ -1,0 +1,19 @@
+ <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+  <div class="single-team mb-30">
+    <div class="team-img">
+      <%= image_tag staff.display_image if staff.image.attached?  %>
+    </div>
+    <div class="team-caption">
+
+      <h3><%= link_to staff.full_name, staff %></h3>
+      <span><%= staff.license.major.name %></span>
+      <!-- Team social -->
+      <div class="team-social">
+        <%= link_to fa_icon("twitter"), "#" %>
+        <%= link_to fa_icon("globe"), "#" %>
+        <%= link_to fa_icon("facebook"), "#" %>
+        <%= link_to fa_icon("pinterest"), "#" %>
+      </div>
+    </div>
+  </div>
+</div>

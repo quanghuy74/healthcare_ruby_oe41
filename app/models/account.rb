@@ -7,12 +7,15 @@ class Account < ApplicationRecord
   has_one_attached :image
 
   attr_accessor :remember_token
-
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   VALID_CARDID_REGEX = /[0-9]{9}/.freeze
   VALID_PHONENUMBER_REGEX = /[0-9]{10}/.freeze
 
+  scope :sort_by_create_at, ->{order created_at: :desc}
+
   before_save :downcase_email
+  before_create :set_default_image
+
   has_secure_password
 
   validates :email, presence: true,
@@ -71,5 +74,11 @@ class Account < ApplicationRecord
 
   def downcase_email
     email.downcase!
+  end
+
+  def set_default_image
+    image.attach(io: File.open(Rails.root.join("app", "assets", "images",
+                                               "gallery", "team1.png")),
+      filename: "team1.png", content_type: "image/png")
   end
 end

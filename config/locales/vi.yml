@@ -62,6 +62,8 @@ vi:
   staff:
     our_staff: "Nhân viên của chúng tôi"
     our_specialist: "Chuyên Gia Của Chúng Tôi"
+    staffs: "Staffs"
+
 
   activerecord:
     models:
@@ -81,6 +83,8 @@ vi:
   error:
     one: "Thông tin của bạn mắc 1 lỗi"
     other: "Thông tin của bạn mắc %{count} lỗi"
+    permit: "bạn không có quyền"
+
 
   views:
     accounts:
@@ -101,8 +105,11 @@ vi:
         date_of_birth: "Ngày Sinh"
         avatar: "Ảnh đại diện"
         update: "Cập nhật"
-        cancel: "Huy"
-
+        cancel: "Hủy"
+      review:
+        reviews: "có %{total} đánh giá"
+        rate: "đánh giá"
+        
     sessions:
       new:
         title: "Đăng nhập"
@@ -125,3 +132,11 @@ vi:
       create:
         success: "Đăng nhập thành công"
         danger: "Tài khoản hoặc mật khẩu không đúng"
+  date:
+    formats:
+      default: "%d-%m-%Y"
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+    am: sáng
+    pm: chiều
