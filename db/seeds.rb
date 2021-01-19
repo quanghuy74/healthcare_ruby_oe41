@@ -75,6 +75,9 @@ end
 accounts.each { |account|
   5.times do |n|
     account.orders.create!(
+      account_name: Faker::Name.name,
+      phone_number: Faker::Number.number(digits: 10),
+      address: Faker::Address.street_address,
       description: Faker::Lorem.sentence(word_count: 10),
       status: Faker::Number.within(range: 0..4),
       total_price: 0
