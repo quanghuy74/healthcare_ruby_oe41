@@ -18,6 +18,7 @@ vi:
     change_pass: "Đổi mật khẩu"
     admin_page: "Trang quản trị"
     staff_page: "Trang nhân viên"
+    my_order: "Lịch sử dịch vụ"
 
   footer:
     email: "healthcare@healthcare.com"
@@ -62,7 +63,7 @@ vi:
   staff:
     our_staff: "Nhân viên của chúng tôi"
     our_specialist: "Chuyên Gia Của Chúng Tôi"
-    staffs: "Staffs"
+    staffs: "Nhân viên"
 
 
   activerecord:
@@ -84,6 +85,10 @@ vi:
     one: "Thông tin của bạn mắc 1 lỗi"
     other: "Thông tin của bạn mắc %{count} lỗi"
     permit: "bạn không có quyền"
+
+  mailers:
+    user_mailer:
+      sub_active: "Kích hoạt tài khoản"
 
   mailers:
     user_mailer:
@@ -152,6 +157,19 @@ vi:
         btn_review: "Đánh giá"
         price: "Đơn giá"
 
+    orders:
+      index:
+        title: "Đơn dịch vụ"
+        heading: "Lịch sử sử dụng dịch vụ của bạn"
+        id: "Mã dịch vụ"
+        detail: "Chi tiết"
+        btn_detail: "Xem"
+        status: "Trạng thái"
+        created_at: "Ngày dặt"
+        btn_update: "Sửa đổi"
+        btn_cancel: "Hủy"
+        no_data: "Bạn không có đơn hàng nào"
+
   controller:
     accounts:
       create:
@@ -177,11 +195,14 @@ vi:
       load:
         danger: "Không tìm thấy dịch vụ"
 
+    orders:
+      index:
+        danger: "Bạn chưa sử dụng dịch vụ nào"
   date:
     formats:
       default: "%d-%m-%Y"
   time:
     formats:
-      default: "%a, %d %b %Y %H:%M:%S %z"
+      default: "%a, %d %b %Y %H:%M:%S"
     am: sáng
     pm: chiều
