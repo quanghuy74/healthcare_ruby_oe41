@@ -11,6 +11,8 @@ class ServicesController < ApplicationController
         per_page: Settings.account.staff.per_page
   end
 
+  private
+  
   def load_service
     return if @service = Service.find_by(id: params[:id])
 

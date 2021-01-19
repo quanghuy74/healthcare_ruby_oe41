@@ -25,4 +25,8 @@ Rails.application.routes.draw do
   end
 
   resources :orders, only: %i(index show)
+
+  namespace :admin do
+    resources :orders, only: %i(index edit)
+  end
 end

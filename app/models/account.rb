@@ -12,8 +12,6 @@ class Account < ApplicationRecord
   VALID_CARDID_REGEX = /[0-9]{9}/.freeze
   VALID_PHONENUMBER_REGEX = /[0-9]{10}/.freeze
 
-  scope :sort_by_create_at, ->{order created_at: :desc}
-
   before_save :downcase_email
   before_create :set_default_image
   before_create :create_activation_digest

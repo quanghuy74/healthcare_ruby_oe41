@@ -39,7 +39,7 @@
                           <ul class="submenu">
                             <% if current_account.admin? %>
                               <li>
-                                <%= link_to t("header.admin_page"), "#" %>
+                                <%= link_to t("header.admin_page"), admin_orders_path %>
                               </li>
                             <% elsif current_account.staff? %>
                               <li>

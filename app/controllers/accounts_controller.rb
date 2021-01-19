@@ -64,7 +64,7 @@ class AccountsController < ApplicationController
   end
 
   def load_staffs
-    @staffs = Account.staff.sort_by_create_at.paginate page: params[:page],
+    @staffs = Account.staff.newest_first.paginate page: params[:page],
                 per_page: Settings.account.staff.per_page
   end
 

@@ -65,6 +65,35 @@ vi:
     our_specialist: "Chuyên Gia Của Chúng Tôi"
     staffs: "Nhân viên"
 
+  admin:
+    sidebar:
+      manage_staffs: "Quảng Lý Nhân Viên"
+      manage_users: "Quản Lý Tài Khoản"
+      manage_majors: "Quản Lý chuyên ngành"
+      manage_services: "Quản Lý dịch vụ"
+      manage_orders: "Quản Lý Lịch Hẹn"
+      manage_contacts: "Quản Lý Liên Hệ"
+      statistics: "Thống kê"
+    manage_order:
+      pending: "Chờ xử lý"
+      approved: "Đã chấp nhận"
+      received: "Đã nhận"
+      inprogress: "Đang trong tiến tình"
+      finished: "Hoàn thành"
+      cancel: "Hủy"
+      service: "Dịch vụ"
+      start_date: "Ngày bắt đầu"
+      end_date: "Ngày kết thúc"
+      title: "Quản lý lịch hẹn"
+      status: "Trạng thái"
+      order: "Lịch hẹn"
+      address: "Dịa chỉ"
+      phone_number: "Số điện thoại"
+      total: "tổng tiền"
+      order_not_found: "Không tìm thấy"
+      accept: "Chấp nhận"
+      reject: "Từ Chối"
+      vnd: "VND"
 
   activerecord:
     models:
@@ -85,26 +114,6 @@ vi:
     one: "Thông tin của bạn mắc 1 lỗi"
     other: "Thông tin của bạn mắc %{count} lỗi"
     permit: "bạn không có quyền"
-
-  mailers:
-    user_mailer:
-      sub_active: "Kích hoạt tài khoản"
-
-  mailers:
-    user_mailer:
-      sub_active: "Kích hoạt tài khoản"
-
-  mailers:
-    user_mailer:
-      sub_active: "Kích hoạt tài khoản"
-
-  mailers:
-    user_mailer:
-      sub_active: "Kích hoạt tài khoản"
-
-  mailers:
-    user_mailer:
-      sub_active: "Kích hoạt tài khoản"
 
   mailers:
     user_mailer:
@@ -228,3 +237,6 @@ vi:
       default: "%a, %d %b %Y %H:%M:%S"
     am: sáng
     pm: chiều
+  notice:
+    success: "Thành công"
+    error: "Đã sảy ra lỗi"

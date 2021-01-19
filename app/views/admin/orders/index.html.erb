@@ -1,0 +1,13 @@
+<h1 class="section"><%= t "admin.manage_order.title" %></h1>
+<div class="btn-group">
+  <%= link_to(t("admin.manage_order.pending"), admin_orders_path(status: Order.statuses[:pending]), class: "button-filter") %>
+  <%= link_to(t("admin.manage_order.approved"), admin_orders_path(status: Order.statuses[:approved]), class: "button-filter") %>
+  <%= link_to(t("admin.manage_order.received"), admin_orders_path(status: Order.statuses[:received]), class: "button-filter") %>
+  <%= link_to(t("admin.manage_order.inprogress"), admin_orders_path(status: Order.statuses[:inprogress]), class: "button-filter") %>
+  <%= link_to(t("admin.manage_order.finished"), admin_orders_path(status: Order.statuses[:finished]), class: "button-filter") %>
+  <%= link_to(t("admin.manage_order.cancel"), admin_orders_path(status: Order.statuses[:cancel]), class: "button-filter") %>
+</div>
+<table class="table">
+  <%= render partial: "order", collection: @orders %>
+</table>
+<%= will_paginate @orders %>
