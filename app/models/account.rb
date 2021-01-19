@@ -4,6 +4,7 @@ class Account < ApplicationRecord
   has_many :reviews, as: :reviewable, dependent: :destroy
   has_many :rated_reviews, class_name: Review.name,
     foreign_key: :reviewer_id, dependent: :destroy
+  has_one_attached :image
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   VALID_CARDID_REGEX = /[0-9]{9}/.freeze
@@ -17,23 +18,32 @@ class Account < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}
   validates :full_name, presence: true
   validates :password, presence: true,
-    length: {minimum: Settings.account.password.min_length}
+    length: {minimum: Settings.account.password.min_length}, allow_nil: true
   validates :card_id, uniqueness: true, format: {with: VALID_CARDID_REGEX}
   validates :phone_number, uniqueness: true,
     format: {with: VALID_PHONENUMBER_REGEX}
   validates :address, presence: true
+  validates :image,
+    content_type: {in: %w(image/jpeg image/gif image/png),
+      message: I18n.t("activerecord.attributes.account.image_format")},
+    size: {less_than: Settings.account.image.max_size.megabytes,
+      message: I18n.t("activerecord.attributes.account.image_size")}
 
   enum role: {customer: 0, admin: 1, staff: 2}
   enum gender: {male: 0, female: 1}
   enum status: {block: 0, unactive: 1, active: 2}
 
-  def Account.digest string
+  def self.digest string
     if cost = ActiveModel::SecurePassword.min_cost
       BCrypt::Engine::MIN_COST
     else
       BCrypt::Engine.cost
     end
-      BCrypt::Password.create string, cost: cost
+    BCrypt::Password.create string, cost: cost
+  end
+
+  def display_image
+    image.variant(resize_to_limit: [300, 300])
   end
 
   private

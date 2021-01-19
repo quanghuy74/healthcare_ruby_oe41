@@ -71,10 +71,12 @@ en:
         address: "Address"
         card_id: "Card id"
         phone_number: "Phone number"
-
+        image_format: "must be a valid image format"
+        image_size: "should be less than 5MB"
   error:
     one: "The form contains 1 error"
     other: "The form contains %{count} errors"
+        
 
   views:
     accounts:
@@ -82,6 +84,21 @@ en:
         title: "Sign up"
         btn_signup: "Create my account"
         btn_cancle: "Cancle"
+      show:
+        edit: "Edit"
+      edit:
+        title: "Edit profile"
+        name: "Full Name"
+        card_id: "Card ID"
+        address: "Address"
+        phone_number: "Phone number"
+        email: "Email"
+        gender: "Gender"
+        date_of_birth: "Date Of Birth"
+        avatar: "Avatar"
+        update: "Update"
+        cancel: "Cancel"
+        
     sessions:
       new:
         title: "Login"
@@ -89,7 +106,7 @@ en:
         ask_account: Don't have an account?
         signup: "Sign up now!"
         forgot_pass: "Forgot your password?"
-
+    
   controller:
     accounts:
       create:
@@ -97,6 +114,9 @@ en:
         danger: "Signup was not successul"
       load_account:
         error: "Not found account"
+      update:
+        success: "update success"
+        fail: "update fail"
     sessions:
       create:
         success: "Login success"

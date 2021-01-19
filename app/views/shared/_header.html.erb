@@ -46,9 +46,9 @@
                                 <%= link_to t("header.staff_page"), "#" %>
                               </li>
                             <% end %>
-                            <li><%= link_to t("header.profile"), "#" %></li>
+                            <li><%= link_to t("header.profile"), current_account %></li>
                             <li><%= link_to t("header.change_pass"), "#" %></li>
-                            <li><%= link_to t("header.update_profile"), "#" %></li>
+                            <li><%= link_to t("header.update_profile"), edit_account_path(current_account) %></li>
                             <li class="divider"></li>
                             <li><%= link_to t("header.logout"), logout_path, method: :delete %></li>
                           </ul>

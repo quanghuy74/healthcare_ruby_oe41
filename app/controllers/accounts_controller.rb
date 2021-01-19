@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_action :load_account, only: :show
+  before_action :load_account, only: %i(show edit update)
 
   def new
     @account = Account.new
@@ -19,6 +19,18 @@ class AccountsController < ApplicationController
 
   def show; end
 
+  def edit; end
+
+  def update
+    if @account.update update_account_params
+      flash[:success] = t "controller.accounts.update.success"
+      redirect_to @account
+    else
+      flash.now[:danger] = t "controller.accounts.update.fail"
+      render :edit
+    end
+  end
+
   private
 
   def accounts_params
@@ -26,6 +38,13 @@ class AccountsController < ApplicationController
                                     :password_confirmation,
                                     :full_name, :address,
                                     :card_id, :phone_number)
+  end
+
+  def update_account_params
+    params.require(:account).permit(:full_name, :card_id, :gender,
+                                    :date_of_birth, :email,
+                                    :address, :phone_number,
+                                    :image)
   end
 
   def load_account
