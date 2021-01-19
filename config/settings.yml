@@ -12,3 +12,6 @@ account:
   staff:
     per_page: 9
 check_box: 1
+
+services:
+  per_page: 3

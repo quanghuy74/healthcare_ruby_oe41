@@ -83,6 +83,10 @@ en:
     user_mailer:
       sub_active: "Account activation"
 
+  mailers:
+    user_mailer:
+      sub_active: "Account activation"
+
   views:
     accounts:
       new:
@@ -125,6 +129,9 @@ en:
       content: "Welcome to the Health Care Service! Click on the link below to activate your
         account:"
       link_active: "Activate"
+
+    services:
+      title: "Services"
 
   controller:
     accounts:
