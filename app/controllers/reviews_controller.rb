@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = current_account.rated_reviews.build review_staff_params
+    @review.reviewable_id = params[:service_id] || params[:account_id]
     if @review.save
       flash[:success] = t "views.accounts.review.success"
     else
@@ -23,7 +24,8 @@ class ReviewsController < ApplicationController
   private
 
   def review_staff_params
-    params.require(:review).permit(:content, :rate, :reviewable_id, :reviewable_type)
+    params.require(:review)
+          .permit(:content, :rate, :reviewable_id, :reviewable_type)
   end
 
   def correct_account

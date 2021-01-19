@@ -132,6 +132,12 @@ en:
 
     services:
       title: "Services"
+      show:
+        title: "Detail service"
+        btn_back: "Come back"
+        btn_add: "Add to cart"
+        btn_review: "Review"
+        price: "price"
 
   controller:
     accounts:
@@ -153,6 +159,9 @@ en:
       edit:
         success: "Account activated!"
         danger: "Invalid activation link"
+    services:
+      load:
+        danger: "Not found service"
 
   date:
     formats:
