@@ -38,13 +38,6 @@ Rails.application.routes.draw do
   namespace :staff do
     get "/my_received_order", to: "staffs#my_received_order"
 
-    resources :work_histories, only: %i(index edit)
-    resources :staffs, only: %i(index edit show update)
-  end
-
-  namespace :staff do
-    get "/my_received_order", to: "staffs#my_received_order"
-
     resources :work_histories, only: %i(index update)
     resources :staffs, only: %i(index update)
   end

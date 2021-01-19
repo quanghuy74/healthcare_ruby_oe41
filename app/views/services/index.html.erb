@@ -14,18 +14,25 @@
     </div>
   </div>
 </div>
-<div class="container container-service row">
-  <% @service.each do |service| %>
-    <div class="col-12 col-md-4 area-service">
-    <div class="card card-service">
-      <%= image_tag service.image %>
-      <div class="card-body">
-        <h4 class="card-title"><%= service.name %></h4>
-        <p class="card-text"><%= service.major.name %></p>
-        <%= link_to "See Profile", service, class:"btn btn-primary float-right" %>
+
+<%= form_tag(services_path, method: :get, class: "row justify-content-center") do %>
+  <%= text_field_tag :term %>
+  <%= submit_tag t "staff.btn_search" %>
+<% end %>
+
+<% unless @services.any? %>
+  <div class="row justify-content-center section-padding30">
+    <div class="col-lg-6">
+      <div class="section-tittle text-center mb-100">
+        <h3><%= t "staff.empty_field" %></h3>
       </div>
     </div>
   </div>
-  <% end %>
-  <%= will_paginate @service %>
-</div>
+<% else %>
+  <div class="container">
+    <div class="container-service row">
+        <%= render @services %>
+      <%= will_paginate @services %>
+    </div>
+  </div>
+<% end %>

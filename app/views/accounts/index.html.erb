@@ -22,11 +22,23 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <% @staffs.each do |staff| %>
-        <%= render partial: "staff", locals: {staff: staff} %>
-      <% end %>
-    </div>
-    <%= will_paginate @staffs %>
+    <%= form_tag(our_staff_path, method: :get, class: "form-search") do %>
+      <%= text_field_tag :term %>
+      <%= submit_tag t "staff.btn_search" %>
+    <% end %>
+    <% unless @staffs.any? %>
+      <div class="row justify-content-center section-padding30">
+        <div class="col-lg-6">
+          <div class="section-tittle text-center mb-100">
+            <h3><%= t "staff.empty_field" %></h3>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <div class="row">
+        <%= render partial: "staff", collection: @staffs %>
+      </div>
+      <%= will_paginate @staffs %>
+    <% end %>
   </div>
 </div>

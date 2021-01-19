@@ -41,6 +41,8 @@ class Account < ApplicationRecord
   enum gender: {male: 0, female: 1}
   enum status: {block: 0, unactive: 1, active: 2}
 
+  scope :by_name, ->(name){where("lower(full_name) LIKE ?", "%#{name.downcase}%")}
+
   def self.digest string
     if cost = ActiveModel::SecurePassword.min_cost
       BCrypt::Engine::MIN_COST

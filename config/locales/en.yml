@@ -60,6 +60,9 @@ en:
     our_staff: "Our Staffs"
     our_specialist: "Our specialist"
     staffs: "Staffs"
+    empty_filed: "Empty field!!!"
+    btn_search: "Search"
+
 
   admin:
     sidebar:
