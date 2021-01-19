@@ -85,6 +85,9 @@ vi:
     other: "Thông tin của bạn mắc %{count} lỗi"
     permit: "bạn không có quyền"
 
+  mailers:
+    user_mailer:
+      sub_active: "Kích hoạt tài khoản"
 
   views:
     accounts:
@@ -109,7 +112,7 @@ vi:
       review:
         reviews: "có %{total} đánh giá"
         rate: "đánh giá"
-        
+
     sessions:
       new:
         title: "Đăng nhập"
@@ -117,11 +120,19 @@ vi:
         ask_account: "Bạn không có tài khoản?"
         signup: "Đăng kí ngay!"
         forgot_pass: "Quên mật khẩu?"
+
+    user_mailers:
+      title: "Dịch vụ chăm sóc sức khỏe"
+      hi: "Hi "
+      content: "Chào mừng đến với Trung tâm chăm sóc sức khỏe! Vui lòng click vào đường dẫn bên dưới để kích hoạt tài khoản của bạn:"
+      link_active: "Kích hoạt"
+
   controller:
     accounts:
       create:
         succsess: "Chào mừng đến với website chăm sóc sức khỏe!"
         danger: "Đăng kí không thành công"
+        info: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản"
       load_account:
         error: "Không tìm thấy tài khoản"
       update:
@@ -132,6 +143,12 @@ vi:
       create:
         success: "Đăng nhập thành công"
         danger: "Tài khoản hoặc mật khẩu không đúng"
+        warning: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản"
+    account_activation:
+      edit:
+        success: "Tài khoản đã được kích hoạt"
+        danger: "Đường dẫn không hợp lệ"
+
   date:
     formats:
       default: "%d-%m-%Y"

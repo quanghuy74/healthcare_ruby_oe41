@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2021_01_19_161533) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "phone_number"
+    t.string "activation_digest"
+    t.datetime "activated_at"
   end
 
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|

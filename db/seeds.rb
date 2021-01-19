@@ -2,7 +2,7 @@
 30.times do |n|
   full_name = Faker::Name.name
   email = "example-#{n+1}@healthcare.org"
-  password = "123123"
+  password = "123123123"
   address = Faker::Address.street_address
   date_of_birth = Faker::Date.between(from: "1980-01-01", to: "2015-01-01")
   gender = Faker::Number.within(range: 0..1)
@@ -11,7 +11,7 @@
   role = Faker::Number.within(range: 0..2)
   phone_number = Faker::Number.number(digits: 10)
   status = 2
-  password = "12312312"
+  activated_at = Time.zone.now
 
   Account.create!(full_name: full_name,
                email: email,
@@ -23,7 +23,8 @@
                status: status,
                phone_number: phone_number,
                password: password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated_at: Time.zone.now)
 end
 
 #major

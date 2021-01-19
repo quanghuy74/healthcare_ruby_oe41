@@ -78,7 +78,10 @@ en:
     one: "The form contains 1 error"
     other: "The form contains %{count} errors"
     permit: "you don't have permit"
-        
+
+  mailers:
+    user_mailer:
+      sub_active: "Account activation"
 
   views:
     accounts:
@@ -103,7 +106,7 @@ en:
       review:
         reviews: "%{total} Reviews"
         rate: "Post comment"
-        
+
     sessions:
       new:
         title: "Login"
@@ -111,11 +114,20 @@ en:
         ask_account: Don't have an account?
         signup: "Sign up now!"
         forgot_pass: "Forgot your password?"
+
+    user_mailers:
+      title: "Health Care Service"
+      hi: "Hi "
+      content: "Welcome to the Health Care Service! Click on the link below to activate your
+        account:"
+      link_active: "Activate"
+
   controller:
     accounts:
       create:
         succsess: "Welcome to the Health care service website!"
         danger: "Signup was not successul"
+        info: "Please check your email to activate your account."
       load_account:
         error: "Not found account"
       update:
@@ -125,6 +137,12 @@ en:
       create:
         success: "Login success"
         danger: "Invalid email/password combination"
+        warning: "Account not activated. Check your email for the activation link."
+    account_activation:
+      edit:
+        success: "Account activated!"
+        danger: "Invalid activation link"
+
   date:
     formats:
       default: "%Y-%m-%d"
