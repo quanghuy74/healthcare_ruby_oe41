@@ -10,6 +10,7 @@ en:
     staffs: "Staffs"
     services: "Services"
     contact: "Contact"
+    signup: "Signup"
 
   footer:
     email: "healthcare@healthcare.com"
@@ -17,7 +18,7 @@ en:
     address: "123 Tôn Đức Thắng"
     copyright: "Copyright @2020 | Designed With by "
     my_company: " Health care"
-    about_content: We understand that quality care means more than just providing state-of-the-art technology and 
+    about_content: We understand that quality care means more than just providing state-of-the-art technology and
       clinical expertise. As such, we are committed to providing you with the highest quality care,
       tailored to meet your individual needs, in a supportive environment that promotes your healing."
 
@@ -27,7 +28,7 @@ en:
     health: "HEALTh"
     safety: "safety"
     appointment: "Appointment"
-    slide_content: "We guarantee that you will be taken care of with an enthusiastic 
+    slide_content: "We guarantee that you will be taken care of with an enthusiastic
       and friendly staff. You will surely be satisfied with our service."
     quote: “I am at an age where I just want to be fit and healthy our bodies are our responsibility!
       So start caring for your body and it will care for you. Eat clean it will care for yout hard.”
@@ -37,9 +38,9 @@ en:
   about:
     about_us: "About us"
     about_our_company: "About our company"
-    welcome: "welcome to our hospital"  
+    welcome: "welcome to our hospital"
     content: "where you can expect to receive world-class care close to home.
-      We understand that quality care means more than just providing state-of-the-art technology and 
+      We understand that quality care means more than just providing state-of-the-art technology and
       clinical expertise. As such, we are committed to providing you with the highest quality care,
       tailored to meet your individual needs, in a supportive environment that promotes your healing."
     our_staff: "our staff"
@@ -50,3 +51,34 @@ en:
   staff:
     our_staff: "Our Staffs"
     our_specialist: "Our specialist"
+
+  activerecord:
+    models:
+      account : Accounts
+    attributes:
+      account:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password_confirmation"
+        full_name: "Full name"
+        address: "Address"
+        card_id: "Card id"
+        phone_number: "Phone number"
+
+  error:
+    one: "The form contains 1 error"
+    other: "The form contains %{count} errors"
+
+  views:
+    accounts:
+      new:
+        title: "Sign up"
+        btn_signup: "Create my account"
+        btn_cancle: "Cancle"
+  controller:
+    accounts:
+      create:
+        succsess: "Welcome to the Health care service website!"
+        danger: "Signup was not successul"
+      load_account:
+        error: "Not found account"

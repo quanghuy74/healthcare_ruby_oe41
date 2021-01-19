@@ -1,11 +1,10 @@
-
 <header>
   <!--? Header Start -->
   <div class="header-area sticky-bar">
     <div class="main-header header-sticky">
       <div class="container-fluid">
         <div class="row align-items-center">
-        
+
           <!-- Logo -->
           <div class="col-xl-2 col-lg-2 col-md-1">
             <div class="logo">
@@ -18,11 +17,24 @@
               <div class="main-menu f-right d-none d-lg-block">
                 <nav>
                   <ul id="navigation">
-                    <li class="nav-item"><%= link_to t("header.home"), root_path %></li>
-                    <li class="nav-item"><%= link_to t("header.about"), about_path %></li>
-                    <li class="nav-item"><%= link_to t("header.staffs"), "#" %></li>
-                    <li class="nav-item"><%= link_to t("header.services"), "#" %></li>
-                    <li class="nav-item"><%= link_to t("header.contact"), "#" %></li>
+                    <li class="nav-item">
+                      <%= link_to t("header.home"), root_path %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to t("header.about"), about_path %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to t("header.staffs"), "#" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to t("header.services"), "#" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to t("header.contact"), "#" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to t("header.signup"), signup_path %>
+                    </li>
                   </ul>
                 </nav>
               </div>

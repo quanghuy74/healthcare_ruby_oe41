@@ -2,4 +2,9 @@ Rails.application.routes.draw do
   root "static_pages#home"
 
   get "/about", to: "static_pages#about"
+
+  get "/signup", to: "accounts#new"
+  post "/signup", to: "accounts#create"
+
+  resources :accounts, only: %i(new create show)
 end
