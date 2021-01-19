@@ -38,4 +38,12 @@ Rails.application.routes.draw do
     resources :work_histories, only: %i(index update)
     resources :staffs, only: %i(index update)
   end
+
+  namespace :api do
+    namespace :v1 do
+      post "auth_account" => "authentication#authenticate_account"
+      
+      resources :accounts
+    end
+  end
 end

@@ -1,5 +1,7 @@
 require_relative "boot"
 require "rails/all"
+require "active_model_serializers"
+require "jwt"
 Bundler.require(*Rails.groups)
 module HealthcareRubyOe41
   class Application < Rails::Application
