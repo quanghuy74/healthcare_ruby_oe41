@@ -1,0 +1,13 @@
+<% if object.reviews.size == 0 %>
+  <p><%= t "staff.no_review_yet" %></p>
+<% else %>
+  <div class="rated">
+    <% for i in 1..5 do %>
+      <% if i <= object.reviews.sum(:rate)/object.reviews.size %>
+        <%= render "shared/star_checked" %>
+      <% else %>
+        <%= render "shared/star_unchecked" %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

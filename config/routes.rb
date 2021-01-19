@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :services, only: %i(index show)
   resources :reviews, only: :destroy
   resources :orders, only: %i(index show create)
-  resources :carts, only: %i(create index show)
+  resources :carts, only: %i(create index)
 
   resources :accounts do
     resources :reviews, only: :create

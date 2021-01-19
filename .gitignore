@@ -35,8 +35,6 @@ config/database.yml
 
 /config/application.yml
 
-/config/application.yml
-
 /spec/examples.txt
 
 /coverage
