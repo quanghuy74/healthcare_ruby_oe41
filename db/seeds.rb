@@ -14,7 +14,7 @@
   status = 2
   password = "12312312"
 
-  Account.create!(full_name: name,
+  Account.create!(full_name: full_name,
                email: email,
                address: address,
                date_of_birth: date_of_birth,
@@ -117,5 +117,3 @@ services.each { |service|
     reviewable_type: Service.name,
   )
 }
-               password: "12345678",
-               password_confirmation: "12345678")

@@ -271,6 +271,7 @@ hr {
     rgb(20, 98, 243),
     rgb(85, 154, 243)
   );
+  
   // background-image: linear-gradient(to left,rgb(158, 160, 175),rgb(122, 124, 138),rgb(158, 160, 175));
   i {
     color: $white;
@@ -286,7 +287,39 @@ hr {
     }
   }
 }
-
+.btn-danger {
+  border: none;
+  padding: 18px 58px 18px 19px;
+  text-transform: capitalize;
+  border-radius: 6px;
+  cursor: pointer;
+  color: $white;
+  display: inline-block;
+  font-size: 16px;
+  background-size: 200%;
+  transition: 0.6s;
+  box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.12);
+  // @extend %btn-bgs;
+  background-image: linear-gradient(
+    to left,
+    rgb(243, 103, 85),
+    rgb(243, 83, 20),
+    rgb(243, 90, 85)
+  );
+  i {
+    color: $white;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    left: 26px;
+    @include transition(0.4s);
+  }
+  &:hover {
+    i {
+      left: 30px;
+    }
+  }
+}
 .btn:hover {
   background-position: right;
 }
