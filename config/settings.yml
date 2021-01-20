@@ -9,3 +9,4 @@ account:
     max_lenght: 255
   image:
     max_size: 5
+check_box: 1

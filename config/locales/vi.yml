@@ -102,7 +102,7 @@ vi:
         avatar: "Ảnh đại diện"
         update: "Cập nhật"
         cancel: "Huy"
-        
+
     sessions:
       new:
         title: "Đăng nhập"
@@ -110,7 +110,6 @@ vi:
         ask_account: "Bạn không có tài khoản?"
         signup: "Đăng kí ngay!"
         forgot_pass: "Quên mật khẩu?"
-    
   controller:
     accounts:
       create:
