@@ -25,7 +25,7 @@
         </tr>
         <tr>
           <td><%= fa_icon("birthday-cake") %></td>
-          <td><%= l @account.date_of_birth, :format => :short  %></td>
+          <td><%= l @account.date_of_birth, format: :short  %></td>
         </tr>
         <tr>
           <td><%= fa_icon("map-marker") %></td>
@@ -44,4 +44,3 @@
   </div>
 </div>
 <%= render "reviews/list_reviews" %>
-

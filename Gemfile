@@ -9,6 +9,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap", "~> 4.5.3"
 gem "config"
 gem "faker", "2.1.2"
+gem "figaro"
 gem "font-awesome-rails"
 gem "image_processing", "1.9.3"
 gem "jbuilder", "~> 2.7"

@@ -32,4 +32,8 @@ yarn-debug.log*
 config/database.yml
 /test
 /spec
-config/application.yml
+/config/local_env.yml
+
+/config/application.yml
+
+/config/application.yml
