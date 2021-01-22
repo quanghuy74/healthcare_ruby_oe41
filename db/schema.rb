@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2021_01_19_161533) do
     t.integer "gender", default: 0
     t.string "card_id"
     t.string "address"
-    t.string "avatar"
     t.integer "role", default: 0, null: false
     t.integer "status", default: 1
     t.string "password_digest"

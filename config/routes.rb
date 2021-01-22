@@ -5,10 +5,11 @@ Rails.application.routes.draw do
 
   get "/signup", to: "accounts#new"
   post "/signup", to: "accounts#create"
+  get "/our_staff", to: "accounts#index"
 
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
-  resources :accounts, except: %i(index)
+  resources :accounts
 end

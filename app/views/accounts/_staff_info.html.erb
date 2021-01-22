@@ -1,0 +1,47 @@
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm- border-item">
+  <div class="single-team mb-30">
+    <div class="team-img">
+      <%= image_tag @account.display_image if @account.image.attached? %>
+    </div>
+    <div class="team-caption">
+
+      <h3><%= @account.full_name %></h3>
+      <table>
+        <tr>
+          <td><%= fa_icon("ambulance") %></td>
+          <td><%= @account.license.major_name %></td>
+        </tr>
+        <tr>
+          <td><%= fa_icon("graduation-cap") %></td>
+          <td><%= @account.license.level %></td>
+        </tr>
+        <tr>
+          <td><%= fa_icon("building") %></td>
+          <td><%= @account.license.workspace %></td>
+        </tr>
+        <tr>
+          <td><%= fa_icon("venus-mars") %></td>
+          <td><%= @account.gender %></td>
+        </tr>
+        <tr>
+          <td><%= fa_icon("birthday-cake") %></td>
+          <td><%= l @account.date_of_birth, :format => :short  %></td>
+        </tr>
+        <tr>
+          <td><%= fa_icon("map-marker") %></td>
+          <td><%= @account.address %></td>
+        </tr>
+        <tr>
+          <td><%= fa_icon("envelope") %></td>
+          <td><%= @account.email %></td>
+        </tr>
+        <tr>
+          <td><%= fa_icon("phone") %></td>
+          <td><%= @account.phone_number %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<%= render "reviews/list_reviews" %>
+

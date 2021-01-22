@@ -1,50 +1,8 @@
-<%= provide(:title, current_account.full_name) %>
+<%= provide(:title, @account.full_name) %>
 <div class="team-area section-padding">
   <div class="container">
     <div class="row">
-
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm- border-item">
-        <div class="single-team mb-30">
-          <div class="team-img">
-            <%= image_tag current_account.display_image if current_account.image.attached?  %>
-          </div>
-          <div class="team-caption">
-
-            <h3><%= current_account.full_name %></h3>
-            <table>
-              <tr>
-                <td><%= fa_icon("venus-mars") %></td>
-                <td><%= current_account.gender %></td>
-              </tr>
-              <tr>
-                <td><%= fa_icon("birthday-cake") %></td>
-                <td><%= current_account.date_of_birth %></td>
-              </tr>
-              <tr>
-                <td><%= fa_icon("map-marker") %></td>
-                <td><%= current_account.address %></td>
-              </tr>
-              <tr>
-                <td><%= fa_icon("envelope") %></td>
-                <td><%= current_account.email %></td>
-              </tr>
-              <tr>
-                <td><%= fa_icon("phone") %></td>
-                <td><%= current_account.phone_number %></td>
-              </tr>
-              <tr>
-                <td><%= fa_icon("id-card") %></td>
-                <td><%= current_account.card_id %></td>
-              </tr>
-            </table>
-            <%= link_to t("views.accounts.show.edit"), edit_account_path(current_account), class: "btn" %>  
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-8 col-md-12 border-item">
-        <%# show customer's order here %>
-      </div>
+      <%= render_details %>
     </div>
-    
   </div>
 </div>

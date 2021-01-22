@@ -1,0 +1,11 @@
+<div class="col-lg-8 col-md-12 border-item post-list">
+  <div class="comments-area">
+    <h1><%= t("views.accounts.review.reviews", total: @account.reviews.count) %></h1>
+    <div class="comment-list">
+      <% @account.reviews.each do |review| %>
+        <%= render partial: "reviews/review", locals: {review: review} %>
+      <% end %>
+    </div>
+  </div>
+  <%= render "reviews/form_review" %>
+</div>

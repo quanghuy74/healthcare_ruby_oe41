@@ -8,7 +8,6 @@
   gender = Faker::Number.within(range: 0..1)
   card_id = Faker::Number.number(digits: 9)
   address = Faker::Address.street_address
-  avatar = "https://st.quantrimang.com/photos/image/2017/04/08/anh-dai-dien-FB-200.jpg" #image_tag("comment/avatar")
   role = Faker::Number.within(range: 0..2)
   phone_number = Faker::Number.number(digits: 10)
   status = 2
@@ -20,7 +19,6 @@
                date_of_birth: date_of_birth,
                gender: gender,
                card_id: card_id,
-               avatar: avatar,
                role: role,
                status: status,
                phone_number: phone_number,
@@ -98,22 +96,26 @@ order_details.each { |order_detail|
 
 #review
 accounts.each { |account|
-  account.reviews.create!(
-    reviewer_id: account.id,
-    content: Faker::Lorem.sentence(word_count: 10),
-    rate: Faker::Number.within(range: 1..5),
-    reviewable_id:Faker::Number.within(range: 1..Account.count),
-    reviewable_type: Account.name,
-  )
+  5.times do |n|
+    account.reviews.create!(
+      reviewer_id: account.id,
+      content: Faker::Lorem.sentence(word_count: 10),
+      rate: Faker::Number.within(range: 1..5),
+      reviewable_id:Faker::Number.within(range: 1..Account.count),
+      reviewable_type: Account.name,
+    )
+  end
 }
 
 services = Service.all
 services.each { |service|
-  service.reviews.create!(
-    reviewer_id: Faker::Number.within(range: 1..Account.count),
-    content: Faker::Lorem.sentence(word_count: 10),
-    rate: Faker::Number.within(range: 1..5),
-    reviewable_id: Faker::Number.within(range: 1..Service.count),
-    reviewable_type: Service.name,
-  )
+  5.times do |n|
+    service.reviews.create!(
+      reviewer_id: Faker::Number.within(range: 1..Account.count),
+      content: Faker::Lorem.sentence(word_count: 10),
+      rate: Faker::Number.within(range: 1..5),
+      reviewable_id: Faker::Number.within(range: 1..Service.count),
+      reviewable_type: Service.name,
+    )
+  end
 }
