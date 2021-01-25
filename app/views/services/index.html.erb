@@ -1,0 +1,31 @@
+<% provide(:title, t("views.services.title")) %>
+<div class="slider-area2">
+  <div class="slider-height2 d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="hero-cap hero-cap2 text-center">
+            <h2 class="cd-headline letters scale">
+              <%= t("views.services.title") %>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container container-service row">
+  <% @service.each do |service| %>
+    <div class="col-12 col-md-4 area-service">
+    <div class="card card-service">
+      <%= image_tag service.image %>
+      <div class="card-body">
+        <h4 class="card-title"><%= service.name %></h4>
+        <p class="card-text"><%= service.major.name %></p>
+        <%= link_to "See Profile", "#", class:"btn btn-primary float-right" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <%= will_paginate @service %>
+</div>

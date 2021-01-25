@@ -89,6 +89,10 @@ vi:
     user_mailer:
       sub_active: "Kích hoạt tài khoản"
 
+  mailers:
+    user_mailer:
+      sub_active: "Kích hoạt tài khoản"
+
   views:
     accounts:
       new:
@@ -130,6 +134,9 @@ vi:
       hi: "Hi "
       content: "Chào mừng đến với Trung tâm chăm sóc sức khỏe! Vui lòng click vào đường dẫn bên dưới để kích hoạt tài khoản của bạn:"
       link_active: "Kích hoạt"
+
+    services:
+        title: "Dịch vụ"
 
   controller:
     accounts:
