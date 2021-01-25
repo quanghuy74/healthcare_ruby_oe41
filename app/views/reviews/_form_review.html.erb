@@ -1,23 +1,26 @@
-<div class="comment-form">
-  <form class="form-contact comment_form" action="#" id="commentForm">
-    <div class="row">
-      <div class="col-12">
-        <div class="form-group">
-          <textarea
-            class="form-control w-100"
-            name="comment"
-            id="comment"
-            cols="30"
-            rows="5"
-            placeholder="Write Comment"
-          ></textarea>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="button button-contactForm btn_1 boxed-btn">
-        <%= t("views.accounts.review.rate") %>
-      </button>
-    </div>
-  </form>
-</div>
+<%= form_for Review.new do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="rating">
+    <%= f.hidden_field :reviewable_id, value: @account.id %>
+    <%= f.hidden_field :reviewable_type, value: "Account" %>
+    <%= f.radio_button :rate, 5, id: "rate-5", checked: true%>
+    <label for="rate-5" class="fas fa-star"></label>
+    <%= f.radio_button :rate, 4, id: "rate-4"%>
+    <label for="rate-4" class="fas fa-star"></label>
+    <%= f.radio_button :rate, 3, id: "rate-3"%>
+    <label for="rate-3" class="fas fa-star"></label>
+    <%= f.radio_button :rate, 2, id: "rate-2"%>
+    <label for="rate-2" class="fas fa-star"></label>
+    <%= f.radio_button :rate, 1, id: "rate-1"%>
+    <label for="rate-1" class="fas fa-star"></label>
+  </div>
+  
+  <div class="form-group">
+    <%= f.text_area :content, class: "form-control w-100", rows: "5",
+      placeholder: t("views.accounts.review.enter_comment") %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t("views.accounts.review.rate"), class: "boxed-btn" %>
+  </div>
+<% end %>

@@ -19,3 +19,36 @@ $state-danger-text: red;
     color: $state-danger-text;
   }
 }
+
+.pagination {
+  margin-top: 80px;
+  margin-left: 35%;
+  
+}
+
+.pagination a, em {
+  font-size: 14px;
+  position: relative;
+  display: block;
+  padding: 0;
+  text-align: center;
+  // padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 45px;
+  width: 45px;
+  height: 45px;
+  border-radius: 0 !important;
+  color: $gray;
+  border: 1px solid $gray;
+  margin-right: 10px;
+
+  i,
+  span {
+      font-size: 13px;
+  }
+
+  &:hover {
+    background-color: blue;
+    color: white;
+  }
+}
