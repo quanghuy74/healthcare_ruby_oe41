@@ -93,6 +93,10 @@ vi:
     user_mailer:
       sub_active: "Kích hoạt tài khoản"
 
+  mailers:
+    user_mailer:
+      sub_active: "Kích hoạt tài khoản"
+
   views:
     accounts:
       new:
@@ -136,7 +140,13 @@ vi:
       link_active: "Kích hoạt"
 
     services:
-        title: "Dịch vụ"
+      title: "Dịch vụ"
+      show:
+        title: "Chi tiết dịch vụ"
+        btn_back: "Quay lại"
+        btn_add: "Chọn dịch vụ"
+        btn_review: "Đánh giá"
+        price: "Đơn giá"
 
   controller:
     accounts:
@@ -159,6 +169,9 @@ vi:
       edit:
         success: "Tài khoản đã được kích hoạt"
         danger: "Đường dẫn không hợp lệ"
+    services:
+      load:
+        danger: "Không tìm thấy dịch vụ"
 
   date:
     formats:

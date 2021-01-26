@@ -7,7 +7,6 @@ class Account < ApplicationRecord
   has_one_attached :image
 
   attr_accessor :remember_token, :activation_token
-
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   VALID_CARDID_REGEX = /[0-9]{9}/.freeze
   VALID_PHONENUMBER_REGEX = /[0-9]{10}/.freeze
@@ -18,6 +17,7 @@ class Account < ApplicationRecord
   before_create :set_default_image
   before_create :create_activation_digest
   before_create :set_default_birthday
+
   has_secure_password
 
   validates :email, presence: true,

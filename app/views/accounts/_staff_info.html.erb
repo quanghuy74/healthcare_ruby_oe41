@@ -43,4 +43,6 @@
     </div>
   </div>
 </div>
-<%= render "reviews/list_reviews" %>
+<div class="col-lg-8 col-md-12 border-item post-list">
+  <%= render partial: "reviews/list_reviews", locals: {reviewable: @account} %>
+</div>

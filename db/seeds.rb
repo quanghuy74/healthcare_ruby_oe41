@@ -1,3 +1,16 @@
+
+Account.create!(full_name: "full_name",
+  email: "huy25107@gmail.com",
+  address: "address",
+  date_of_birth: Time.now,
+  gender: 1,
+  card_id: "123123123",
+  role: 1,
+  status: 2,
+  phone_number: "1231231231",
+  password: "123123123",
+  password_confirmation: "123123123",
+  activated_at: Time.zone.now)
 #generate account
 30.times do |n|
   full_name = Faker::Name.name
