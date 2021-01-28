@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   resources :services do
     resources :reviews, only: :create
   end
+
+  resources :orders, only: %i(index show)
 end

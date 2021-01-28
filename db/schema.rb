@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_01_23_165130) do
 
-  create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "accounts", charset: "utf8mb4", force: :cascade do |t|
     t.string "email"
     t.string "full_name"
     t.date "date_of_birth"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
     t.datetime "activated_at"
   end
 
-  create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_blobs", charset: "utf8mb4", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -52,13 +52,13 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_variant_records", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "licenses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "licenses", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "major_id", null: false
     t.bigint "account_id", null: false
     t.string "level"
@@ -71,13 +71,13 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
     t.index ["major_id"], name: "index_licenses_on_major_id"
   end
 
-  create_table "majors", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "majors", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "order_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "order_details", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "order_id", null: false
     t.bigint "service_id", null: false
     t.date "start_date", null: false
@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
     t.index ["service_id"], name: "index_order_details_on_service_id"
   end
 
-  create_table "orders", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "orders", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "account_id", null: false
     t.integer "staff_id"
     t.text "description"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
     t.index ["account_id"], name: "index_orders_on_account_id"
   end
 
-  create_table "reviews", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
     t.integer "reviewer_id"
     t.text "content"
     t.integer "rate"
@@ -114,7 +114,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
     t.index ["reviewable_type", "reviewable_id"], name: "index_reviews_on_reviewable"
   end
 
-  create_table "services", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "services", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "major_id", null: false
     t.string "name"
     t.string "image"
@@ -125,7 +125,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
     t.index ["major_id"], name: "index_services_on_major_id"
   end
 
-  create_table "work_histories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "work_histories", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "order_detail_id", null: false
     t.text "note"
     t.datetime "created_at", precision: 6, null: false
