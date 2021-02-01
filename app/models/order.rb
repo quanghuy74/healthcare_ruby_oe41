@@ -6,6 +6,10 @@ class Order < ApplicationRecord
     approved: 1,
     received: 2,
     inprogress: 3,
-    finished: 4
+    finished: 4,
+    cancel: 5
   }
+
+  scope :get_by_status, ->(status){where status: status}
+  delegate :full_name, :address, :phone_number, to: :account, prefix: :account
 end

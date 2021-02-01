@@ -1,0 +1,51 @@
+
+<div class="sidebar-container">
+  <div class="sidebar-logo">
+    <%= t "header.title"%>
+  </div>
+  <ul class="sidebar-navigation">
+    <li>
+      <%= link_to  "#"  do %>
+        <%= fa_icon("home") %>
+        <%= t ("admin.sidebar.manage_staffs")%>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to  "#"  do %>
+        <%= fa_icon("home") %>
+        <%= t ("admin.sidebar.manage_users")%>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to  "#"  do %>
+        <%= fa_icon("home") %>
+        <%= t ("admin.sidebar.manage_majors")%>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to  "#"  do %>
+        <%= fa_icon("home") %>
+        <%= t ("admin.sidebar.manage_services")%>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to  admin_orders_path  do %>
+        <%= fa_icon("home") %>
+        <%= t ("admin.sidebar.manage_orders")%>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to  "#"  do %>
+        <%= fa_icon("home") %>
+        <%= t ("admin.sidebar.manage_contacts")%>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to  "#"  do %>
+        <%= fa_icon("home") %>
+        <%= t ("admin.sidebar.statistics")%>
+      <% end %>
+    </li>
+  </ul>
+</div>
+

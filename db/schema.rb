@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_165130) do
   create_table "order_details", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "order_id", null: false
     t.bigint "service_id", null: false
+    t.integer "status", default: 0
     t.date "start_date", null: false
     t.date "end_date", null: false
     t.decimal "into_money", precision: 10

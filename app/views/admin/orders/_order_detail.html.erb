@@ -1,0 +1,10 @@
+<tr class="info">
+  <th colspan="3" class="table-head-detail"><%= t "admin.manage_order.service" %><%= order_detail.service.name %></th>
+</tr>
+<tr class="info">
+  <td colspan="2">
+  <p><%= t "admin.manage_order.start_date" %><%= l order_detail.start_date, format: :long %></p>
+  <p><%= t "admin.manage_order.end_date" %><%= l order_detail.end_date, format: :long %></p>
+  </td>
+  <td><b><%= order_detail.into_money %><%= t "admin.manage_order.vnd" %></b></td>
+</tr>

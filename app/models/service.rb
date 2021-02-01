@@ -4,4 +4,6 @@ class Service < ApplicationRecord
   has_many :reviews, as: :reviewable, dependent: :destroy
 
   scope :newest_first, ->{order created_at: :desc}
+
+  delegate :name, to: :major, prefix: :major
 end
