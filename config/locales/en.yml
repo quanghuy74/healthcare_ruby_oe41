@@ -152,6 +152,19 @@ en:
         btn_update: "Update"
         btn_cancel: "Cancel"
         no_data: "You have not any orders"
+      show:
+        title: "Order details"
+        s_name: "Service name"
+        start_date: "Start name"
+        end_date: "End date"
+        price: "Price"
+        num_day: "Number of day"
+        into_money: "Into money"
+        total_money: "TOTAL MONEY"
+        name: "ACCOUNT NAME"
+        address: "ADDRESS"
+        phone: "PHONE"
+        back: "back"
 
   controller:
     accounts:
@@ -180,6 +193,11 @@ en:
     orders:
       index:
         danger: "You have not used any service"
+    orders:
+      index:
+        danger: "You have not used any service"
+      show:
+        danger: "Not found order"
   date:
     formats:
       default: "%Y-%m-%d"

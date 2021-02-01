@@ -7,6 +7,7 @@ class Account < ApplicationRecord
   has_one_attached :image
 
   attr_accessor :remember_token, :activation_token
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   VALID_CARDID_REGEX = /[0-9]{9}/.freeze
   VALID_PHONENUMBER_REGEX = /[0-9]{10}/.freeze
