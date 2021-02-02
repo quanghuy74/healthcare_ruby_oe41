@@ -91,6 +91,12 @@ en:
       accept: "accept"
       reject: "reject"
       vnd: " VND"
+    statistic:
+      customers: "New customers"
+      staffs: "New staffs"
+      revenue: "Revenue"
+      reviews: "Reviews"
+
   staff_page:
     my_received_order: "My received order"
     customer_order: "customer order"

@@ -142,5 +142,4 @@ ActiveRecord::Schema.define(version: 2021_02_02_024255) do
   add_foreign_key "order_details", "services"
   add_foreign_key "orders", "accounts"
   add_foreign_key "services", "majors"
-  add_foreign_key "work_histories", "order_details"
 end
