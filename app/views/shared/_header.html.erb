@@ -43,7 +43,7 @@
                               </li>
                             <% elsif current_account.staff? %>
                               <li>
-                                <%= link_to t("header.staff_page"), "#" %>
+                                <%= link_to t("header.staff_page"), staff_staffs_path %>
                               </li>
                               <% else %>
                                 <li>

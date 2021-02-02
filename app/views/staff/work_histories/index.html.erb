@@ -1,0 +1,15 @@
+
+
+<div class="container-content">
+  <table class="table ">
+    <tr class="table-head-detail">
+      <th><%= t "staff_page.id" %></th>
+      <th><%= t "staff_page.service" %></th>
+      <th><%= t "staff_page.money" %></th>
+      <th><%= t "staff_page.time" %></th>
+    </tr>
+    <%= render partial: "work_history", collection: @work_histories %>
+  </table>
+  <%= will_paginate @work_histories %>
+</div>
+

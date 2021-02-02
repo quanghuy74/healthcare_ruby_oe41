@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: :edit
   resources :services, only: %i(index show)
   resources :reviews, only: :destroy
+  resources :orders, only: %i(index show)
 
   resources :accounts do
     resources :reviews, only: :create
@@ -24,9 +25,14 @@ Rails.application.routes.draw do
     resources :reviews, only: :create
   end
 
-  resources :orders, only: %i(index show)
-
   namespace :admin do
     resources :orders, only: %i(index edit)
+  end
+
+  namespace :staff do
+    get "/my_received_order", to: "staffs#my_received_order"
+
+    resources :work_histories, only: %i(index update)
+    resources :staffs, only: %i(index update)
   end
 end

@@ -102,15 +102,6 @@ orders.each { |order|
   }
 }
 
-#work_history
-order_details = OrderDetail.all
-order_details.each { |order_detail|
-
-  order_detail.work_histories.create!(
-    note: Faker::Lorem.sentence(word_count: 10),
-  )
-}
-
 #review
 accounts.each { |account|
   5.times do |n|

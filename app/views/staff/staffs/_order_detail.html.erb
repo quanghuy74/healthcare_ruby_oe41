@@ -1,0 +1,18 @@
+<tr class="info">
+  <th colspan="2" class="table-head-detail">
+    <%= t "admin.manage_order.service" %>
+    <%= order_detail.service.name %>
+  </th>
+  <th class="table-head-detail">
+    <% unless order_detail.order.approved? || order_detail.finished? %>
+      <%= link_to(t("staff_page.confirm_finished"), staff_work_history_path(order_detail), method: "patch", class: "btn")%>
+    <% end %>
+  </th>
+</tr>
+<tr class="info">
+  <td colspan="2">
+    <p><%= t "admin.manage_order.start_date" %><%= l order_detail.start_date, format: :long %></p>
+    <p><%= t "admin.manage_order.end_date" %><%= l order_detail.end_date, format: :long %></p>
+  </td>
+  <td><b><%= order_detail.into_money %><%= t "admin.manage_order.vnd" %></b></td>
+</tr>
