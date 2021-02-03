@@ -64,8 +64,13 @@ class AccountsController < ApplicationController
   end
 
   def load_staffs
-    @staffs = Account.staff.newest_first.paginate page: params[:page],
-                per_page: Settings.account.staff.per_page
+    @staffs = Account.staff
+    @staffs = if params[:term]
+      @staffs.by_name(params[:term].strip)
+    else
+      @staffs
+    end.newest_first.paginate page: params[:page],
+                              per_page: Settings.account.staff.per_page
   end
 
   def permit_update

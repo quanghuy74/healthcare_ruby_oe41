@@ -64,6 +64,8 @@ vi:
     our_staff: "Nhân viên của chúng tôi"
     our_specialist: "Chuyên Gia Của Chúng Tôi"
     staffs: "Nhân viên"
+    empty_filed: "Không tồn tại!!!"
+    btn_search: "Tìm kiếm"
 
   admin:
     sidebar:

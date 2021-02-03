@@ -4,5 +4,6 @@ class Service < ApplicationRecord
   has_many :reviews, as: :reviewable, dependent: :destroy
 
   scope :newest_first, ->{order created_at: :desc}
+  scope :by_name, ->(name){where("lower(name) LIKE ?", "%#{name.downcase}%")}
   delegate :name, to: :major, prefix: :major
 end
