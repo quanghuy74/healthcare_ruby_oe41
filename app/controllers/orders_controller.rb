@@ -19,6 +19,10 @@ class OrdersController < ApplicationController
     redirect_to services_path
   end
 
+  def show
+    @order_details = @order.order_details.includes(:service)
+  end
+
   private
 
   def load_order

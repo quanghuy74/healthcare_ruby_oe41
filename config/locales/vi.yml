@@ -67,10 +67,7 @@ vi:
     staffs: "Nhân viên"
     empty_filed: "Không tồn tại!!!"
     btn_search: "Tìm kiếm"
-<<<<<<< HEAD
-=======
     no_review_yet: "Chưa có đánh giá nào"
->>>>>>> add average star
 
   admin:
     sidebar:

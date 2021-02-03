@@ -63,11 +63,7 @@ en:
     staffs: "Staffs"
     empty_filed: "Empty field!!!"
     btn_search: "Search"
-<<<<<<< HEAD
-
-=======
     no_review_yet: "No review yet"
->>>>>>> add average star
 
   admin:
     sidebar:
