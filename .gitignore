@@ -38,3 +38,5 @@ config/database.yml
 /config/application.yml
 
 /spec/examples.txt
+
+/coverage
