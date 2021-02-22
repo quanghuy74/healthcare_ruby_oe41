@@ -1,7 +1,7 @@
 class Staff::WorkHistoriesController < ApplicationController
   layout "staff"
 
-  before_action :require_staff
+  authorize_resource class: Staff::WorkHistoriesController  
   before_action :load_order_detail, only: :update
   before_action :load_work_histories, only: :index
 

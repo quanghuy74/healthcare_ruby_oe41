@@ -10,7 +10,8 @@ Account.create!(full_name: "full_name",
   phone_number: "1231231231",
   password: "123123123",
   password_confirmation: "123123123",
-  activated_at: Time.zone.now)
+  confirmed_at: Time.zone.now).skip_confirmation!
+
 #generate account
 30.times do |n|
   full_name = Faker::Name.name
@@ -24,7 +25,6 @@ Account.create!(full_name: "full_name",
   role = Faker::Number.within(range: 0..2)
   phone_number = Faker::Number.number(digits: 10)
   status = 2
-  activated_at = Faker::Date.between(from: "2020-01-01", to: "2021-01-01")
 
   Account.create!(full_name: full_name,
                email: email,
@@ -37,7 +37,7 @@ Account.create!(full_name: "full_name",
                phone_number: phone_number,
                password: password,
                password_confirmation: password,
-               activated_at: activated_at)
+               confirmed_at: Time.zone.now).skip_confirmation!
 end
 
 #major

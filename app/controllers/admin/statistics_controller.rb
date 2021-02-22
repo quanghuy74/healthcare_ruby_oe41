@@ -1,6 +1,9 @@
 class Admin::StatisticsController < ApplicationController
   layout "admin"
 
+  authorize_resource class: Admin::StatisticsController
+
+
   def index; end
 
   def accounts

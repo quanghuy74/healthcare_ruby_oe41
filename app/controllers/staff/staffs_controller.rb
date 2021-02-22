@@ -1,7 +1,7 @@
 class Staff::StaffsController < ApplicationController
   layout "staff"
 
-  before_action :require_staff
+  authorize_resource class: Staff::StaffsController
   before_action :load_order, only: :update
 
   def index

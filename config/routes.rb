@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/our_staff", to: "accounts#index"
   delete "/remove_service", to: "carts#remove_service"
-  get "/remove_service", to: "carts#remove_service"
 
   devise_for :accounts
   resources :accounts, only: %i(index show)
