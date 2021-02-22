@@ -21,7 +21,7 @@
           <h5><%= review.account.full_name %></h5>
           <p class="date"><%= l review.created_at, format: :long  %></p>
         </div>
-        <% if current_account? review.account %>
+        <% if current_account == review.account %>
           <%= link_to "delete", review, class: "btn-delete", method: :delete,
             data: {confirm: t("views.accounts.review.you_sure")} %>
         <% end %>

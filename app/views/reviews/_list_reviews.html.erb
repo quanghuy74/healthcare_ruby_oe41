@@ -5,4 +5,4 @@
     <%= will_paginate @reviews %>
   </div>
 </div>
-<%= render partial: "reviews/form_review", locals: {reviewable: reviewable} if logged_in?%>
+<%= render partial: "reviews/form_review", locals: {reviewable: reviewable} if account_signed_in?%>
