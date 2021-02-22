@@ -12,7 +12,7 @@ class Account < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   VALID_CARDID_REGEX = /[0-9]{9}/.freeze
-  VALID_PHONENUMBER_REGEX = /[0-9]{10}/.freeze
+  VALID_PHONENUMBER_REGEX = /[0-9]{10,11}/.freeze
 
   before_save :downcase_email
   before_create :set_default_image
@@ -21,7 +21,7 @@ class Account < ApplicationRecord
 
   has_secure_password
 
-  validates :email, presence: true,
+  validates :email, presence: true, uniqueness: true,
     length: {maximum: Settings.account.email.max_length},
     format: {with: VALID_EMAIL_REGEX}
   validates :full_name, presence: true
@@ -36,7 +36,7 @@ class Account < ApplicationRecord
       message: I18n.t("activerecord.attributes.account.image_format")},
     size: {less_than: Settings.account.image.max_size.megabytes,
       message: I18n.t("activerecord.attributes.account.image_size")}
-
+  validates :role, presence: true
   enum role: {customer: 0, admin: 1, staff: 2}
   enum gender: {male: 0, female: 1}
   enum status: {block: 0, unactive: 1, active: 2}
@@ -97,6 +97,8 @@ class Account < ApplicationRecord
   end
 
   def create_activation_digest
+    return if self.active?
+
     self.activation_token = Account.new_token
     self.activation_digest = Account.digest(activation_token)
   end
