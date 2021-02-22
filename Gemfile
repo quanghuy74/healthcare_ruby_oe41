@@ -9,6 +9,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap", "~> 4.5.3"
 gem "chartkick"
 gem "config"
+gem "devise"
 gem "faker", "2.1.2"
 gem "figaro"
 gem "font-awesome-rails"
@@ -50,6 +51,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem "shoulda-matchers", "~> 3.1"
+  gem "simplecov", require: false
   gem "rails-controller-testing"
 end
 

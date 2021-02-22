@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
+  
+  devise_for :accounts
 
   resources :accounts
   resources :account_activations, only: :edit

@@ -1,0 +1,85 @@
+<% provide(:title, t("views.accounts.new.title")) %>
+<div class="container signup container-signup">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card card-signup">
+
+
+      <!--title-->
+      <div class="card-header">
+        <h3><%= t "views.accounts.new.title" %></h3>
+      </div>
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <!-- email-->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :email, class:"input-group-text"  %>
+            </div>
+            <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: :email %>
+          </div>
+
+           <!-- password-->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :password, class:"input-group-text"  %>
+            </div>
+            <%= f.password_field :password, class: "form-control", placeholder: :password %>
+          </div>
+
+          <!-- password_confirmation-->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :password_confirmation, class:"input-group-text"  %>
+            </div>
+            <%= f.password_field :password_confirmation, class: "form-control", placeholder: :password_confirmation %>
+          </div>
+
+          <!-- full_name -->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :full_name, class:"input-group-text"  %>
+            </div>
+            <%= f.text_field :full_name, class: "form-control",
+              placeholder: :full_name %>
+          </div>
+
+          <!-- Address -->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :address, class:"input-group-text"  %>
+            </div>
+            <%= f.text_field :address, class: "form-control",
+              placeholder: :address %>
+          </div>
+
+          <!-- card_id -->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :card_id, class:"input-group-text"  %>
+            </div>
+            <%= f.text_field :card_id, class: "form-control",
+              placeholder: :card_id %>
+          </div>
+
+          <!-- phone number -->
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <%= f.label :phone_number, class:"input-group-text"  %>
+            </div>
+            <%= f.text_field :phone_number, class: "form-control",
+              placeholder: :phone_number %>
+          </div>
+
+          <!-- btn_signup -->
+          <div class="form-group">
+            <%= f.submit yield(:button_text), value: t("views.accounts.new.btn_signup"), class: "btn submit-btn2" %>
+          </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,8 @@
 class Account < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable,
+         :confirmable
+
   has_many :orders, dependent: :destroy
   has_many :received_orders, class_name: Order.name,
     foreign_key: :staff_id, dependent: :destroy
@@ -18,8 +22,6 @@ class Account < ApplicationRecord
   before_create :set_default_image
   before_create :create_activation_digest
   before_create :set_default_birthday
-
-  has_secure_password
 
   validates :email, presence: true, uniqueness: true,
     length: {maximum: Settings.account.email.max_length},
@@ -42,32 +44,8 @@ class Account < ApplicationRecord
 
   scope :by_name, ->(name){where("lower(full_name) LIKE ?", "%#{name.downcase}%")}
 
-  def self.digest string
-    BCrypt::Password.create string, cost: BCrypt::Engine.cost
-  end
-
   def display_image
     image.variant(resize_to_limit: [300, 300])
-  end
-
-  def self.new_token
-    SecureRandom.urlsafe_base64
-  end
-
-  def authenticated? attribute, token
-    digest = send "#{attribute}_digest"
-    return false unless digest
-
-    BCrypt::Password.new(digest).is_password? token
-  end
-
-  def remember
-    self.remember_token = Account.new_token
-    update_column :remember_digest, Account.digest(remember_token)
-  end
-
-  def forget
-    update_column(:remember_digest, nil)
   end
 
   def send_activation_email
@@ -88,12 +66,5 @@ class Account < ApplicationRecord
 
   def set_default_birthday
     self.date_of_birth ||= Time.now
-  end
-
-  def create_activation_digest
-    return if self.active?
-    
-    self.activation_token = Account.new_token
-    self.activation_digest = Account.digest(activation_token)
   end
 end
