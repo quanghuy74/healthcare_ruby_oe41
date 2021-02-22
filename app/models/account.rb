@@ -43,12 +43,7 @@ class Account < ApplicationRecord
   scope :by_name, ->(name){where("lower(full_name) LIKE ?", "%#{name.downcase}%")}
 
   def self.digest string
-    if cost = ActiveModel::SecurePassword.min_cost
-      BCrypt::Engine::MIN_COST
-    else
-      BCrypt::Engine.cost
-    end
-    BCrypt::Password.create string, cost: cost
+    BCrypt::Password.create string, cost: BCrypt::Engine.cost
   end
 
   def display_image
