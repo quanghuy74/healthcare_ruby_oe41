@@ -29,9 +29,24 @@
             <span class="review-no"></span>
           </div>
           <p class="product-description"><%= @service.description %></p>
-          <h4 class="price"><%= link_to t "views.services.show.price" %>: <span><%= @service.price %></span></h4>
+          <h4 class="price"><%= t "views.services.show.price" %>: <span><%= @service.price %></span></h4>
           <div class="action">
-            <%= link_to t("views.services.show.btn_add"), "#", class: "add-to-cart btn btn-default" %>
+            <% if logged_in? %>
+              <%= form_tag(carts_path, method: :post, remote: true) do %>
+                <%= hidden_field_tag(:service_id, @service.id) %>
+                <div class="form">
+                  <div class="start_date">
+                    <label style="width: 150px;"><%= t "cart.start_date" %></label>
+                    <%= date_field_tag(:start_date, Date.current) %>
+                  </div>
+                  <div class="end_date">
+                    <label style="width: 150px;"><%= t "cart.end_date" %></label>
+                    <%= date_field_tag(:end_date, Date.current) %>
+                  </div>
+                </div>
+                <%= button_tag "submit", type: "submit", class: "btn-link" %>
+              <% end %>
+            <% end %>
           </div>
         </div>
       </div>

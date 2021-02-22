@@ -19,6 +19,7 @@ vi:
     admin_page: "Trang quản trị"
     staff_page: "Trang nhân viên"
     my_order: "Lịch sử dịch vụ"
+    cart: "lịch hẹn(%{count})"
 
   footer:
     email: "healthcare@healthcare.com"
@@ -96,7 +97,6 @@ vi:
       order_not_found: "Không tìm thấy"
       accept: "Chấp nhận"
       reject: "Từ Chối"
-      vnd: " VND"
     statistic:
       customers: "Khách hàng mới"
       staffs: "Nhân Viên mới"
@@ -111,6 +111,16 @@ vi:
     service: "Dịch vụ"
     money: "thành tiền"
     time: "thời gian"
+
+  cart:
+    service: "dịch vụ"
+    date: "thời gian"
+    price: "giá"
+    into_money: "Thành tiền"
+    total: "tổng tiền"
+    confirm: "xác nhận"
+    back_service: "Dịch vụ khác"
+    remove: "Xóa"
 
   activerecord:
     models:
@@ -257,3 +267,6 @@ vi:
   notice:
     success: "Thành công"
     error: "Đã sảy ra lỗi"
+    service_exist: "service already exists"
+    validate_date: "ngày bắt đầu hoặc ngày kết thúc không hợp lệ"
+

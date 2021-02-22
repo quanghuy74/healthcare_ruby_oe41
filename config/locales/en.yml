@@ -19,6 +19,7 @@ en:
     admin_page: "Admin Page"
     staff_page: "Staff Page"
     my_order: "My orders"
+    cart: "cart(%{count})"
 
   footer:
     email: "healthcare@healthcare.com"
@@ -93,7 +94,6 @@ en:
       order_not_found: "Order not found"
       accept: "accept"
       reject: "reject"
-      vnd: " VND"
     statistic:
       customers: "New customers"
       staffs: "New staffs"
@@ -109,6 +109,18 @@ en:
     service: "Service"
     money: "money"
     time: "time"
+  
+  cart:
+    service: "Service"
+    date: "date"
+    price: "price"
+    into_money: "into_money"
+    total: "total"
+    confirm: "confirm"
+    back_service: "other service"
+    remove: "remove"
+    start_date: "start date"
+    end_date: "end date"
 
   activerecord:
     models:
@@ -128,10 +140,6 @@ en:
     one: "The form contains 1 error"
     other: "The form contains %{count} errors"
     permit: "you don't have permit"
-
-  mailers:
-    user_mailer:
-      sub_active: "Account activation"
 
   mailers:
     user_mailer:
@@ -238,10 +246,6 @@ en:
     services:
       load:
         danger: "Not found service"
-
-    orders:
-      index:
-        danger: "You have not used any service"
     orders:
       index:
         danger: "You have not used any service"
@@ -258,3 +262,5 @@ en:
   notice:
     success: "Success"
     error: "error"
+    service_exist: "service already exists"
+    validate_date: "validate date, please check start date and end date"

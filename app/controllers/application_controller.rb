@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
   include OrdersHelper
+  include CartsHelper
 
+  before_action :current_cart
   before_action :set_locale
 
   def set_locale
@@ -24,5 +26,10 @@ class ApplicationController < ActionController::Base
 
     flash[:danger] = t "error.permit"
     redirect_to root_path
+  end
+  
+  def current_cart
+    session[:cart] ||= []
+    @carts = session[:cart]
   end
 end

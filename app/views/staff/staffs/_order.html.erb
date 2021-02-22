@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <th colspan="2"><%= t "admin.manage_order.total" %></th>
-    <td><b><%= order.order_details.sum(:into_money) %><%= t "admin.manage_order.vnd" %></b></td>
+    <td><b><%= number_to_currency(order.order_details.sum(:into_money)) %></b></td>
   </tr>
   <%= render partial: "order_detail", collection: order.order_details %>
 </tbody>

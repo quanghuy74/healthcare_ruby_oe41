@@ -4,5 +4,5 @@
   <td><%= l(order_detail.end_date, format: :default) %></td>
   <td><%= number_to_currency(order_detail.service.price) %></td>
   <td><%= count_day order_detail %></td>
-  <td><%= number_to_currency(into_money order_detail) %></td>
+  <td><b><%= number_to_currency(into_money order_detail) %></b></td>
 </tr>

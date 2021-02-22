@@ -9,6 +9,20 @@ class OrdersController < ApplicationController
     @order_details = @order.order_details.includes(:service)
   end
 
+  def create 
+    @order = Order.new(account_id: current_account.id,
+                        status: Order.statuses[:pending],
+                        total_price: total_money(@carts),
+                        order_details_attributes: @carts)
+    if @order.save
+      session[:cart] = nil
+      flash[:success] = t "notice.success"
+    else
+      flash[:danger] = t "notice.error"
+    end
+    redirect_to services_path
+  end
+
   private
 
   def load_order
