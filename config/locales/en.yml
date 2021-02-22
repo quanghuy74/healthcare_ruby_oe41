@@ -287,3 +287,10 @@ en:
       sign_up: "Sign up"
       forget_pw: "Forgot your password?"
       dont_receive_confirmation: "Didn't receive confirmation instructions?"
+
+  filter:
+    searching: "Searching"
+    price: "Price"
+    min: "Min"
+    max: "Max"
+    created_at: "Created at"

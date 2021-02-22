@@ -41,6 +41,8 @@ class Account < ApplicationRecord
   enum gender: {male: 0, female: 1}
   enum status: {block: 0, unactive: 1, active: 2}
 
+  ransack_alias :account, :full_name_or_email_cont
+
   scope :by_name, ->(name){where("lower(full_name) LIKE ?", "%#{name.downcase}%")}
 
   def display_image
