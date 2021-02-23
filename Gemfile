@@ -33,6 +33,7 @@ group :development, :test do
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -44,8 +45,10 @@ end
 
 group :test do
   gem "capybara", ">= 3.26"
+  gem "rspec-rails", "~> 4.0.1"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "shoulda-matchers", "~> 3.1"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
