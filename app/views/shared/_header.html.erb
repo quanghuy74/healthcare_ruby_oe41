@@ -33,7 +33,8 @@
                     <li class="nav-item">
                       <%= link_to t("header.contact"), "#" %>
                     </li>
-                    <% if logged_in? %>
+
+                    <% if account_signed_in? %>
                       <li class="nav-item">
                         <%= link_to t("header.cart", count: @carts.length), carts_path %>
                       </li>
@@ -55,19 +56,18 @@
                               </li>
                             <% end %>
                             <li><%= link_to t("header.profile"), current_account %></li>
-                            <li><%= link_to t("header.change_pass"), "#" %></li>
-                            <li><%= link_to t("header.update_profile"), edit_account_path(current_account) %></li>
+                            <li><%= link_to t("header.update_profile"), edit_account_registration_path %></li>
                             <li class="divider"></li>
-                            <li><%= link_to t("header.logout"), logout_path, method: :delete %></li>
+                            <li><%= link_to t("header.logout"), destroy_account_session_path, method: :delete %></li>
                           </ul>
                         </li>
-                      </li>
+                      </li> 
                     <% else %>
                       <li class="nav-item">
-                        <%= link_to t("header.signup"), signup_path %>
+                        <%= link_to t("header.signup"), new_account_registration_path %>
                       </li>
                       <li class="nav-item">
-                        <%= link_to t("header.login"), login_path %>
+                        <%= link_to t("header.login"), new_account_session_path %>
                       </li>
                     <% end %>
                   </ul>

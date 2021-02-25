@@ -8,10 +8,8 @@ $gray: #999999;
   align-content: center;
 }
 
-.card-signup{
-  width: 500px;
-}
 .card {
+  width: 600px;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -22,7 +20,7 @@ $gray: #999999;
 }
 
 .input-group-prepend label {
-  width: 190px;
+  width: 200px;
   background-color: $light-green-header;
   color: black;
   border: 0 !important;
@@ -31,16 +29,6 @@ $gray: #999999;
 input:focus {
   outline: 0 0 0 0 !important;
   box-shadow: 0 0 0 0 !important;
-}
-
-.signup_btn {
-  color: black;
-  background-color: $light-yealow;
-}
-
-.signup_btn:hover {
-  color: black;
-  background-color: white;
 }
 
 .btn-group {

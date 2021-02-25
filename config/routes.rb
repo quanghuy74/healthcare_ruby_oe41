@@ -2,20 +2,16 @@ Rails.application.routes.draw do
   root "static_pages#home"
 
   get "/about", to: "static_pages#about"
-
-  get "/signup", to: "accounts#new"
-  post "/signup", to: "accounts#create"
   get "/our_staff", to: "accounts#index"
+  delete "/remove_service", to: "carts#remove_service"
+  get "/remove_service", to: "carts#remove_service"
 
-  get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
-
-  resources :accounts
-  resources :account_activations, only: :edit
+  devise_for :accounts
+  resources :accounts, only: %i(index show)
   resources :services, only: %i(index show)
   resources :reviews, only: :destroy
   resources :orders, only: %i(index show create)
+  resources :carts, only: %i(create index show)
 
   resources :accounts do
     resources :reviews, only: :create
@@ -41,8 +37,4 @@ Rails.application.routes.draw do
     resources :work_histories, only: %i(index update)
     resources :staffs, only: %i(index update)
   end
-
-  resources :carts, only: %i(create index show)
-  delete "/remove_service", to: "carts#remove_service"
-  get "/remove_service", to: "carts#remove_service"
 end

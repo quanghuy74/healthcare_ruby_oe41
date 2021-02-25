@@ -141,10 +141,16 @@ en:
     other: "The form contains %{count} errors"
     permit: "you don't have permit"
 
-  mailers:
-    user_mailer:
-      sub_active: "Account activation"
-
+  mailer:
+    welcome: "Welcome"
+    hello: "Hello"
+    confirm_info: "You can confirm your account email through the link below:"
+    confirm_link: "Confirm my account"
+    reset_pw_info: "Someone has requested a link to change your password. You can do this through the link below."
+    reset_pw_link: "Change my password"
+    reset_pw_info1: "If you didn't request this, please ignore this email."
+    reset_pw_info2: "Your password won't change until you access the link above and create a new one."
+    
   views:
     accounts:
       new:
@@ -264,3 +270,20 @@ en:
     error: "error"
     service_exist: "service already exists"
     validate_date: "validate date, please check start date and end date"
+
+  devise: 
+    confirmable_title: "Resend confirmation instructions"
+    password:
+      change_your_pw: "Change your password"
+      change_my_pw: "Change my password"
+      forget_pw: "Forgot your password?"
+      send_reset_pw: "Send me reset password instructions"
+    registration:
+      info_new_pw: "(leave blank if you don't want to change it)"
+      info_pw: "(we need your current password to confirm your changes)"
+      btn_back: "back"
+    link:
+      log_in: "Log in"
+      sign_up: "Sign up"
+      forget_pw: "Forgot your password?"
+      dont_receive_confirmation: "Didn't receive confirmation instructions?"

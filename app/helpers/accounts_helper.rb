@@ -6,7 +6,7 @@ module AccountsHelper
   end
 
   def render_details
-    if current_account? @account
+    if current_account == @account
       render "customer_info"
     elsif @account.staff?
       render "staff_info"

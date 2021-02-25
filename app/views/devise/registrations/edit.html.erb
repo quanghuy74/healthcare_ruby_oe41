@@ -2,8 +2,8 @@
 <div class="container section-padding">
 <h1><%= t("views.accounts.edit.title") %></h1>
 
-  <%= form_for(current_account) do |f| %>
-    <%= render "shared/error_messages", object: f.object%>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
     <%= f.label :full_name, t("views.accounts.edit.name") %>
     <%= f.text_field :full_name, class: "form-control" %>
@@ -21,17 +21,26 @@
     <%= f.email_field :email, class: "form-control" %>
     <br>
     <%= f.label :gender, t("views.accounts.edit.gender") %>
-    <%= select_tag(:gender, options_for_select([t("male"), 0],[t("female"), 1] )) %>
+    <%= select_tag(:gender, options_for_select([[t("male"), 0],[t("female"), 1]])) %>
     <br>
     <%= f.label :date_of_birth, t("views.accounts.edit.date_of_birth") %>
     <%= f.date_field :date_of_birth, class: "form-control" %>
 
     <%= f.label :image, t("views.accounts.edit.avatar") %>
     <%= f.file_field :image, class: "form-control" %>
+
+
+    <%= f.label :password %><i><%= t("devise.registration.info_new_pw") %></i><br />
+    <%= f.password_field :password, class: "form-control" %>
+
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+
+    <%= f.label :current_password %> <i><%= t("devise.registration.info_pw") %></i><br />
+    <%= f.password_field :current_password, class: "form-control" %>
     <br>
-    <div class="btn-group">
-      <%= f.submit t("views.accounts.edit.update"), class: "btn" %>
-      <%= link_to t("views.accounts.edit.cancel"), current_account,class: "btn btn-danger" %>
-    </div>
+    <%= f.submit t("views.accounts.edit.update"), class: "btn submit-btn1" %>
+    <%= link_to t("devise.registration.btn_back"), :back, class: "btn submit-btn2" %>
+
   <% end %>
 </div>

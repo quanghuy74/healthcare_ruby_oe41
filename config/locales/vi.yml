@@ -142,9 +142,15 @@ vi:
     other: "Thông tin của bạn mắc %{count} lỗi"
     permit: "bạn không có quyền"
 
-  mailers:
-    user_mailer:
-      sub_active: "Kích hoạt tài khoản"
+  mailer:
+    welcome: "Xin chào"
+    hello: "Xin chào"
+    confirm_info: "Bạn có thể xác nhận email tài khoản của mình thông qua liên kết bên dưới:"
+    confirm_link: "Xác nhận tài khoản của tôi"
+    reset_pw_info: "Ai đó đã yêu cầu một liên kết để thay đổi mật khẩu của bạn. Bạn có thể làm điều này thông qua liên kết dưới đây."
+    reset_pw_link: "Thay đổi mật khẩu của tôi"
+    reset_pw_info1: "Nếu bạn không yêu cầu điều này, vui lòng bỏ qua email này."
+    reset_pw_info2: "Mật khẩu của bạn sẽ không thay đổi cho đến khi bạn truy cập vào liên kết ở trên và tạo một mật khẩu mới."
 
   views:
     accounts:
@@ -270,3 +276,19 @@ vi:
     service_exist: "service already exists"
     validate_date: "ngày bắt đầu hoặc ngày kết thúc không hợp lệ"
 
+  devise: 
+    confirmable_title: "Gửi lại hướng dẫn xác nhận"
+    password:
+      change_your_pw: "Thay đổi mật khẩu của bạn"
+      change_my_pw: "Thay đổi mật khẩu của tôi"
+      forget_pw: "Quên mật khẩu?"
+      send_reset_pw: "Gửi tôi hướng dẫn cập nhật mật khẩu"
+    registration:
+      info_new_pw: "(để trống nếu bạn không muốn thay đổi nó)"
+      info_pw: "(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận các thay đổi của bạn)"
+      btn_back: "Trở về"
+    link:
+      log_in: "Đăng nhập"
+      sign_up: "Đằng ký"
+      forget_pw: "Quên mật khâu?"
+      dont_receive_confirmation: "Không nhận được hướng dẫn xác nhận?"
