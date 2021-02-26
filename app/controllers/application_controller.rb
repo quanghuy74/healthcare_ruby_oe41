@@ -10,24 +10,15 @@ class ApplicationController < ActionController::Base
     I18n.locale = params[:locale] || I18n.default_locale
   end
 
+  def current_ability
+    # instead of Ability.new(current_user)
+    @current_ability ||= ::Ability.new(current_account)
+  end
+  
   def default_url_options
     {locale: I18n.locale}
   end
 
-  def require_admin
-    return if current_account&.admin?
-
-    flash[:danger] = t "error.permit"
-    redirect_to root_path
-  end
-
-  def require_staff
-    return if current_account&.staff?
-
-    flash[:danger] = t "error.permit"
-    redirect_to root_path
-  end
-  
   def current_cart
     session[:cart] ||= []
     @carts = session[:cart]
@@ -37,5 +28,9 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :address, :card_id, :phone_number])
+  end
+
+  rescue_from CanCan::AccessDenied do | exception |
+    redirect_to root_url, alert: exception.message
   end
 end

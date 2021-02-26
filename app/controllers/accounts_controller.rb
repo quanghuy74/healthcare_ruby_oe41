@@ -1,7 +1,8 @@
 class AccountsController < ApplicationController
+  load_and_authorize_resource
+  
   before_action :load_staffs, only: :index
-  before_action :load_account, :permit_load_info, only: :show
-
+  before_action :permit_load_info, only: :show
 
   def show
     @reviews = @account.reviews.newest_first.paginate page: params[:page],

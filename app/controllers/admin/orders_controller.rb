@@ -1,7 +1,8 @@
 class Admin::OrdersController < ApplicationController
   layout "admin"
 
-  before_action :require_admin
+  authorize_resource class: Admin::OrdersController
+
   before_action :load_order, only: :edit
 
   def index
