@@ -292,3 +292,9 @@ vi:
       sign_up: "Đằng ký"
       forget_pw: "Quên mật khâu?"
       dont_receive_confirmation: "Không nhận được hướng dẫn xác nhận?"
+  filter:
+    searching: "Tìm kiếm"
+    price: "Giá"
+    min: "Nhỏ nhất"
+    max: "Lớn nhất"
+    created_at: "Ngày tạo"

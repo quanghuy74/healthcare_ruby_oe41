@@ -15,10 +15,6 @@
   </div>
 </div>
 
-<%= form_tag(services_path, method: :get, class: "row justify-content-center") do %>
-  <%= text_field_tag :term %>
-  <%= submit_tag t "staff.btn_search" %>
-<% end %>
 
 <% unless @services.any? %>
   <div class="row justify-content-center section-padding30">
@@ -30,6 +26,62 @@
   </div>
 <% else %>
   <div class="container">
+  <div class="card">
+    <%= search_form_for @q  do |f| %>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <%= f.search_field :name_cont, class: "form-control", placeholder: t("filter.searching") %>
+        </div>
+      </div>
+      <article class="card-group-item">
+        <header class="card-header">
+          <h6 class="title"><%= t "filter.price" %></h6>
+        </header>
+        <div class="filter-content">
+          <div class="card-body">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label><%= t "filter.min" %></label>
+                <%= f.number_field :price_gteq, class: "form-control", placeholder: "$0" %>
+              </div>
+              <div class="form-group col-md-6 text-right">
+                <label><%= t "filter.max" %></label>
+                <%= f.number_field :price_lteq, class: "form-control", placeholder: "$1000" %>
+              </div>
+            </div>
+          </div> 
+        </div>
+    </article> 
+      <article class="card-group-item">
+        <header class="card-header">
+          <h6 class="title"><%= t "filter.major" %></h6>
+        </header>
+        <div class="card-body">
+          <%= f.collection_check_boxes :major_id__matches_any, Major.order(:name), :id, :name do |b| %>
+            <div class="custom-control custom-checkbox">
+              <%= b.label(data_value: b.value) { b.check_box + b.text }  %>
+            </div>
+          <% end %>
+        </div>
+      </article>
+      <% if current_account && current_account.admin? %>
+
+        <article class="card-group-item">
+          <header class="card-header">
+            <h6 class="title"><%= t "filter.created_at" %></h6>
+          </header>
+          <div class="">
+            <div class="card-body">
+            <%= f.date_field :created_at_eq, class: "form-control" %>
+            </div>
+          </div>
+        </article>
+      <% end %>
+      <%= f.submit t("staff.btn_search"), class: "submit-btn3" %>
+    <% end %>
+    
+  </div> 
+
     <div class="container-service row">
         <%= render @services %>
       <%= will_paginate @services %>

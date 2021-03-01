@@ -22,10 +22,13 @@
         </div>
       </div>
     </div>
-    <%= form_tag(our_staff_path, method: :get, class: "form-search") do %>
-      <%= text_field_tag :term %>
-      <%= submit_tag t "staff.btn_search" %>
+
+    <%= search_form_for @q  do |f| %>
+      <%= f.search_field :account, placeholder: t("filter.searching") %>
+      <%= f.collection_select :license_major_id_eq, Major.order(:name), :id, :name, class: "form-control" %>
+      <%= f.submit t "staff.btn_search" %>
     <% end %>
+
     <% unless @staffs.any? %>
       <div class="row justify-content-center section-padding30">
         <div class="col-lg-6">
