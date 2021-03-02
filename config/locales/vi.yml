@@ -103,6 +103,18 @@ vi:
       staffs: "Nhân Viên mới"
       revenue: "Doanh thu"
       reviews: "Đánh giá"
+    staff: 
+      id: "id"
+      avatar: "Ảnh đại diện"
+      full_name: "Họ và tên"
+      workspace: "Nơi làm việc"
+      delete: "xóa"
+      edit: "Sửa"
+      update: "Cập nhật"
+      create: "Tạo"
+    customer:
+      block: "Khóa"
+
   staff_page:
     customer_order: "Lịch hẹn có thể nhận"
     my_received_order: "lịch hẹn đã nhận"
@@ -173,6 +185,8 @@ vi:
         avatar: "Ảnh đại diện"
         update: "Cập nhật"
         cancel: "Hủy"
+        major: "major"
+        workspace: "workspace"
       review:
         reviews: "có %{total} đánh giá"
         rate: "đánh giá"

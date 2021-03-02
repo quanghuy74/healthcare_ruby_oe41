@@ -3,6 +3,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(account)
+    cannot :manage, Admin::AccountsController
     cannot :manage, Admin::OrdersController
     cannot :manage, Admin::StatisticsController
     cannot :manage, Staff::WorkHistoriesController

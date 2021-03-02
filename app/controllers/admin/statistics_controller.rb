@@ -3,7 +3,6 @@ class Admin::StatisticsController < ApplicationController
 
   authorize_resource class: Admin::StatisticsController
 
-
   def index; end
 
   def accounts

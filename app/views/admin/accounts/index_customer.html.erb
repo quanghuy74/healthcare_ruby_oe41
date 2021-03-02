@@ -1,0 +1,12 @@
+<table class="table">
+  <tr class="table-head">
+    <td><%= t "admin.staff.id" %></td>
+    <td><%= t "admin.staff.avatar" %></td>
+    <td><%= t "admin.staff.full_name" %></td>
+    <td><%= t "admin.staff.email" %></td>
+  </tr>
+  <% @customers.each do |customer| %>
+    <%= render partial: "customer", locals: {customer: customer} %>
+  <% end %>
+</table>
+<%= will_paginate @customers %>
