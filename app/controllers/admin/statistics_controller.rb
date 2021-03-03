@@ -6,7 +6,7 @@ class Admin::StatisticsController < ApplicationController
   def index; end
 
   def accounts
-    render json: Account.customer.group_by_month(:activated_at).count
+    render json: Account.customer.group_by_month(:created_at).count
   end
 
   def revenue
@@ -14,7 +14,7 @@ class Admin::StatisticsController < ApplicationController
   end
 
   def staffs
-    render json: Account.staff.group_by_month(:activated_at).count
+    render json: Account.staff.group_by_month(:created_at).count
   end
 
   def reviews
