@@ -1,8 +1,0 @@
-<div class="comments-area">
-  <h1><%= t("views.accounts.review.reviews", total: reviewable.reviews.count) %></h1>
-  <div class="comment-list">
-    <%= render @reviews %>
-    <%= will_paginate @reviews %>
-  </div>
-</div>
-<%= render partial: "reviews/form_review", locals: {reviewable: reviewable} if account_signed_in?%>
